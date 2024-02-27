@@ -1,0 +1,213 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border: 1px solid red;
+}
+
+:root {
+    --corPadrao: #c7244c;
+}
+
+body {
+    background-color: #000000;
+}
+
+main {
+    color: #ffffff;
+}
+
+.cargoContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.nomeCargo {
+    align-items: center;
+    width: 28vw;
+    height: 18vh;
+}
+
+.nomeCargo #nomeEN {
+    font-size: 25;
+    color: var(--corPadrao);
+    filter: drop-shadow(0 0 12px #ff5781);
+    /* font-family: 'Monomaniac One', sans-serif; */
+    font-family: 'Stick', sans-serif; 
+    margin-bottom: 10px;
+    letter-spacing: 10;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.nomeCargo #nomeJP {
+    font-size: 25;
+    color: var(--corPadrao);
+    filter: drop-shadow(0 0 12px #ff5781);
+    /* font-family: 'Monomaniac One', sans-serif; */
+    font-family: 'Reggae One', system-ui;
+    /* font-family: 'Stick', sans-serif;  */
+    margin-bottom: 30px;
+    letter-spacing: 10;
+}
+
+.glitchText {
+    position: relative;
+}
+
+.nomeCargo #nomeJP ::after {
+    content: attr(data-text);
+    z-index: -1;
+    position: absolute;
+    width: 110%;
+    color: var(--corPadrao);
+}
+
+.nomeCargo #nomeJP ::before {
+    content: attr(data-text);
+}
+
+#cargoPT {
+    font-size: 70px;
+    font-family: 'Aldrich', sans-serif;
+    filter: drop-shadow(0 0 4px #ffffffcc);
+}
+
+#cargoEN {
+    font-size: 100px;
+    /* font-family: 'Monomaniac One', sans-serif;  */
+    /* font-family: 'Reggae One', system-ui; */
+    /* font-family: 'Stick', sans-serif; */
+
+    /* font-family: 'Audiowide', sans-serif; */
+    font-family: 'Aldrich', sans-serif;
+    /* font-family: 'Rajdhani', sans-serif; */
+    filter: drop-shadow(0 0 4px #ffffffcc);
+}
+
+#cargoJP {
+    font-size: 100px;
+    font-family: 'Monomaniac One', sans-serif;
+    filter: drop-shadow(0 0 4px #ffffffcc);
+    margin-top: -50px;
+}
+
+.terminal {
+    font-size: 160px;
+    font-family: 'Reggae One', system-ui;
+    position: absolute;
+    /* left: 525px; */
+    left: -127px;
+    /* right: 175px; */
+    top: -105px;
+    color: var(--corPadrao);
+    filter: drop-shadow(0 0 12px #ff4d79);
+    transition: left 1.5s;
+}
+
+
+.imgContainer {
+    display: flex;
+    position: relative;
+}
+
+#terminalUnder {
+    animation: piscar 1.35s infinite;
+    position: absolute;
+    /* left: -100px; */
+}
+
+@keyframes piscar {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fundo {
+    width: 65%;
+    right: -650px;
+    /* right: -1000; */
+    top: 0;
+    z-index: -2;
+    position: absolute;
+    /* filter: hue-rotate(85deg) saturate(89%) drop-shadow(0 0 30px #ff4d79) blur(1.9px); */
+    filter: blur(1.25px) brightness(80%);
+    /* box-shadow: 0 0 50px 90px #4724c760; */
+}
+
+.fundoBrilho {
+    width: 65%;
+    right: -650px;
+    /* right: -1000; */
+    top: 0;
+    z-index: -1;
+    position: absolute;
+    /* filter: hue-rotate(85deg) saturate(89%) drop-shadow(0 0 30px #ff4d79) blur(1.9px); */
+    filter: blur(1.25px) brightness(120%);
+    /* box-shadow: 0 0 50px 90px #4724c760; */
+    animation: fundo 2.25s infinite;
+}
+
+.setaAbaixo {
+    position: absolute;
+    transform: translate(250%,100%);
+    top: 800px;
+    animation: descerLuz 5s infinite;
+    background: linear-gradient(to bottom, #bb002f65, var(--corPadrao));
+    border-radius: 100px;
+    width: 300px;
+    height: 12px;
+}
+
+@keyframes descerLuz {
+    0% {
+        transform: translate(250%,100%);
+        background-position-y: 0px;
+        filter: drop-shadow(0 0 12px var(--corPadrao));
+    }
+    50% {
+        transform: translate(250%,800%);
+        background-position-y: 60px;
+        filter: drop-shadow(1px 1px 20px #ff87a5);
+
+    }
+    100% {
+        transform: translate(250%,100%);
+        background-position-y: 60px;
+        filter: drop-shadow(0 0 12px var(--corPadrao));
+    }
+}
+
+@keyframes fundo {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0.7;
+    }
+    40% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

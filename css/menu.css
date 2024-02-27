@@ -1,0 +1,62 @@
+:root {
+    --corPadrao: #c7244c;
+}
+
+.menu {
+    width: 5.5%;
+    height: 100vh;
+    background: linear-gradient(to left, #000000, #ff578144, var(--corPadrao));
+    position: fixed;
+    z-index: 1;
+}
+
+#menuLuz {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 65px;
+    height: 100vh;
+    z-index: 1;
+    filter: blur(4px);
+    border-radius: 25px;
+    background: linear-gradient(to bottom, #96000048, #ff325467, #96000054), linear-gradient(to left,#fd2f5180, transparent);
+    animation: luz 1.65s linear infinite;
+}
+
+.menu img {
+    position: relative;
+    left: 12%;
+    top: 50vh;
+    scale: 130%;
+    filter: brightness(0) invert(0.65);
+    z-index: 2;
+}
+
+
+
+@keyframes luz {
+    0% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 1000;
+    }
+}
+
+.menu h2 {
+    /* font-family: 'Monomaniac One', sans-serif; */
+    /* font-family: 'Aldrich', sans-serif; */
+    /* font-family: 'Stick', sans-serif; */
+    font-family: 'Reggae One', system-ui;
+    font-size: 22px;
+    filter: drop-shadow(5px 5px 8px #000000);
+    z-index: 2;
+    color: #ffffff;
+    border: 100px #000000;
+    position: relative;
+    left: 25%;
+    top: 47.25%;
+    opacity: 0;
+    transition: 3s;
+}
