@@ -55,7 +55,8 @@ main {
     margin-bottom: 30px;
     letter-spacing: 10;
     z-index: 0;
-    animation: glitch 5s step-end infinite;
+    animation: glitch 5s step-end;
+    animation-iteration-count: 2;
 }
 
 #nomeJP::after, #nomeJP::before {
@@ -469,17 +470,17 @@ main {
 @keyframes glitchMovement {
     0% {
       top: 0px;
-      left: -20px;
+      left: -40px;
     }
   
     15% {
       top: 10px;
-      left: 10px;
+      left: 15px;
     }
   
     60% {
       top: 5px;
-      left: -10px;
+      left: -20px;
     }
   
     75% {
@@ -489,73 +490,73 @@ main {
   
     100% {
       top: 10px;
-      left: 5px;
+      left: -55px;
     }
   }
 
-  @keyframes glitchOpacity {
-    0% {
-      opacity: 0.1;
-    }
-  
-    5% {
-      opacity: 0.7;
-    }
-  
-    30% {
-      opacity: 0.4;
-    }
-  
-    45% {
-      opacity: 0.6;
-    }
-  
-    76% {
-      opacity: 0.4;
-    }
-  
-    90% {
-      opacity: 0.8;
-    }
-  
-    1%,
-    7%,
-    33%,
-    47%,
-    78%,
-    93% {
-      opacity: 0;
-    }
+@keyframes glitchOpacity {
+  0% {
+    opacity: 0.1;
   }
 
-  @keyframes glitchFont {
-    0% {
-      font-weight: 100;
-      color: rgb(248, 86, 175);
-      filter: blur(3px);
-    }
-  
-    20% {
-      font-weight: 500;
-      color: rgb(214, 29, 252);
-      filter: blur(0);
-    }
-  
-    50% {
-      font-weight: 300;
-      color: rgb(248, 86, 175);
-      filter: blur(2px);
-    }
-  
-    60% {
-      font-weight: 700;
-      color: var(--corPadrao);
-      filter: blur(0);
-    }
-  
-    90% {
-      font-weight: 500;
-      color: rgb(214, 29, 252);
-      filter: blur(6px);
-    }
+  5% {
+    opacity: 0.7;
   }
+
+  30% {
+    opacity: 0.4;
+  }
+
+  45% {
+    opacity: 0.6;
+  }
+
+  76% {
+    opacity: 0.4;
+  }
+
+  90% {
+    opacity: 0.8;
+  }
+
+  1%,
+  7%,
+  33%,
+  47%,
+  78%,
+  93% {
+    opacity: 0;
+  }
+}
+
+@keyframes glitchFont {
+  0% {
+    font-weight: 100;
+    color: rgb(248, 86, 175);
+    filter: blur(3px);
+  }
+
+  20% {
+    font-weight: 500;
+    color: rgb(214, 29, 252);
+    filter: blur(0);
+  }
+
+  50% {
+    font-weight: 300;
+    color: rgb(248, 86, 175);
+    filter: blur(2px);
+  }
+
+  60% {
+    font-weight: 700;
+    color: rgb(214, 29, 252);
+    filter: blur(0);
+  }
+
+  90% {
+    font-weight: 500;
+    color: rgb(214, 29, 252);
+    filter: blur(6px);
+  }
+}
