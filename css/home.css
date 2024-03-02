@@ -45,6 +45,7 @@ main {
     letter-spacing: 10;
     width: fit-content;
     white-space: nowrap;
+    display: none;
 }
 
 #nomeJP {
