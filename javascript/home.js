@@ -2,9 +2,10 @@ let menu = $('.menu');
 let menuLuz = $('#menuLuz');
 let terminal = $('.terminal');
 let underline = $('#terminalUnder');
-// let textoMenu = document.querySelectorAll('.menu h2');
 let textoMenu = $('.menu h2');
 let imgMenu = $('.menu img');
+let nomeJP = $('#nomeJP');
+let nomeEN = $('#nomeEN');
 
 $(imgMenu).css('transition','3s');
 
@@ -17,6 +18,7 @@ $(menu).on('mouseover', function() {
     $(textoMenu).css('transition', '3s');
     $(imgMenu).css('filter', 'brightness(0) invert(1) drop-shadow(0 0 8px #ffffff)');
 });
+
 $(menu).on('mouseout', function() {
     $(this).width('5.5%');
     $(this).css('transition', 'width 2s');
@@ -27,10 +29,11 @@ $(menu).on('mouseout', function() {
     $(imgMenu).css('filter', 'brightness(0) invert(0.65)');
 });
 
-// window.addEventListener('load', function() {
-//         terminal.style.left = '525px';
-//         setInterval(function(){
-//             underline.style.transition = 'left 5s';
-//             // underline.style.left = '525px';
-//         },5000);
-//     });
+$(nomeJP).ready(function() {
+    setTimeout(function() {
+        $(nomeJP).css('display', 'none');
+        // animação glitch maior e lenta
+        $(nomeEN).css('display', 'block');
+        // animação glitch after e before apenas
+    }, 10000);
+})
