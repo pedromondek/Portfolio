@@ -39,7 +39,6 @@ main {
     font-size: 25;
     color: var(--corPadrao);
     filter: drop-shadow(0 0 12px #ff5781);
-    /* font-family: 'Monomaniac One', sans-serif; */
     font-family: 'Stick', sans-serif; 
     margin-bottom: 30px;
     letter-spacing: 10;
@@ -58,6 +57,7 @@ main {
     z-index: 0;
     animation: glitch 5s step-end;
     animation-iteration-count: 2;
+    opacity: 0;
 }
 
 #nomeJP::after, #nomeJP::before {
@@ -82,7 +82,7 @@ main {
 }
 
 .glitchClass {
-    animation: glitch 1s, glitchFont 1.25s steps(3), glitchMovement 5s step-end;
+    animation: glitch 1s, glitchFont 1.25s steps(3);
 }
 
 #cargoPT {
