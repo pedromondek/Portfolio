@@ -41,7 +41,7 @@ main {
     filter: drop-shadow(0 0 12px #ff5781);
     /* font-family: 'Monomaniac One', sans-serif; */
     font-family: 'Stick', sans-serif; 
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     letter-spacing: 10;
     width: fit-content;
     white-space: nowrap;
@@ -79,6 +79,10 @@ main {
     left: 3px;
     top: 5px;
     animation: glitch 5s step-end infinite, glitchOpacity 5s step-end infinite, glitchFont 8s step-end infinite, glitchMovement 8s step-end infinite;
+}
+
+.glitchClass {
+    animation: glitch 1s, glitchFont 1.25s steps(3), glitchMovement 5s step-end;
 }
 
 #cargoPT {
