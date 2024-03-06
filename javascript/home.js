@@ -7,7 +7,11 @@ let imgMenu = $('.menu img');
 let nomeJP = $('#nomeJP');
 let nomeEN = $('#nomeEN');
 
+
+// menu
 $(imgMenu).css('transition','3s');
+
+// CRIAR ANIMAÇÃO DO MENU DESCENDO
 
 $(menu).on('mouseover', function() {   
     $(this).css('width', '15vw');
@@ -29,18 +33,31 @@ $(menu).on('mouseout', function() {
     $(imgMenu).css('filter', 'brightness(0) invert(0.65)');
 });
 
+
+// welcome
 $(nomeJP).ready(function() {
+    $(nomeJP).animate({
+        opacity: "1",
+    },2500);
     setTimeout(function() {
-        $(nomeJP).css('display', 'none');
+        $(nomeJP).hide();
         $(nomeEN).css('transition', '3s');
-        $(nomeEN).css('display', 'block');
+        $(nomeEN).show();
         $(nomeEN).css('animation', 'glitch 2s reverse, glitchOpacity 1s, glitchFont 2s, glitchMovement 3s reverse');
-    }, 10000);
-    setInterval(function () {
-        $(nomeEN).removeClass('glitchClass');
-        setTimeout(function() {
-            $(nomeEN).css('animation', '');
-            $(nomeEN).addClass('glitchClass');
-        }, 5000);
-    }, 10000);
+    }, 6500);
+
+    let check = false;
+    
+    setTimeout(function () {
+        setInterval(function() {
+            if (check == false) {
+                $(nomeEN).removeClass('glitchClass');
+                check = true;
+            } else {
+                $(nomeEN).css('animation', '');
+                $(nomeEN).addClass('glitchClass');
+                check = false;
+            }
+        }, 2000);
+    }, 3500);
 });
