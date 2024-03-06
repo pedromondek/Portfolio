@@ -32,8 +32,15 @@ $(menu).on('mouseout', function() {
 $(nomeJP).ready(function() {
     setTimeout(function() {
         $(nomeJP).css('display', 'none');
-        // animação glitch maior e lenta
+        $(nomeEN).css('transition', '3s');
         $(nomeEN).css('display', 'block');
-        // animação glitch after e before apenas
+        $(nomeEN).css('animation', 'glitch 2s reverse, glitchOpacity 1s, glitchFont 2s, glitchMovement 3s reverse');
     }, 10000);
-})
+    setInterval(function () {
+        $(nomeEN).removeClass('glitchClass');
+        setTimeout(function() {
+            $(nomeEN).css('animation', '');
+            $(nomeEN).addClass('glitchClass');
+        }, 5000);
+    }, 10000);
+});
