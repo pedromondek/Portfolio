@@ -1,15 +1,23 @@
 let menu = $('.menu');
 let menuLuz = $('#menuLuz');
 let menuImgs = $('.menuImgs');
+
+let textoMenu = $('.menu h2');
+let imgMenu = $('.menu img');
+
 let terminal = $('#terminal');
 let terminalIcon = $('.terminalIcon');
 let underline = $('#terminalUnder');
-let textoMenu = $('.menu h2');
-let imgMenu = $('.menu img');
+
 let nomeJP = $('#nomeJP');
 let nomeEN = $('#nomeEN');
+
+let cargoJP = $('#cargoJP');
+
 let imgFundo1 = $('.fundo');
 let imgFundo2 = $('.fundoBrilho');
+
+let setaAbaixo = $('.setaAbaixo');
 
 
 // menu
@@ -39,7 +47,6 @@ $(menu).on('mouseout', function() {
 
 
 // load
-
 /// menu
 $(menuLuz).animate({
     top: '+=1000',
@@ -62,12 +69,9 @@ $(underline).animate({
 
 /// imagem fundo
 $(imgFundo1).animate({opacity:1}, 4500);
-setTimeout(function () {
-    $(imgFundo2).css('animation', 'fundo 3.5s infinite');
-}, 3500)
 
 /// down scroll
-
+$(setaAbaixo).animate({opacity:1},4500);
 
 /// nome
 $(nomeJP).ready(function() {
@@ -96,3 +100,8 @@ $(nomeJP).ready(function() {
         }, 2000);
     }, 6000);
 });
+
+/// cargo
+setTimeout(function() {
+    $(cargoJP).fadeTo(4000,1);
+},450);
