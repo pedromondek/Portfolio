@@ -9,12 +9,14 @@
     position: fixed;
     z-index: 1;
     overflow: hidden;
+    top: -1000px;
+    opacity: 0;
 }
 
 #menuLuz {
     display: block;
     position: absolute;
-    top: 0;
+    top: -1000;
     left: -10px;
     width: 65px;
     height: 100vh;
@@ -23,7 +25,6 @@
     border-radius: 25px;
     background: linear-gradient(to bottom, #96000048, #ff325467, #96000054), linear-gradient(to left,#fd2f5180, transparent);
     animation: luz 1.65s linear infinite;
-    
 }
 
 .menu img {
@@ -55,6 +56,11 @@
     border: 100px #000000;
     opacity: 0;
     transition: 3s;
+}
+
+.menuImgs {
+    opacity: 0%;
+    display: none;
 }
 
 .menu ul {
