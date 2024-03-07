@@ -1,7 +1,8 @@
 let menu = $('.menu');
 let menuLuz = $('#menuLuz');
 let menuImgs = $('.menuImgs');
-let terminal = $('.terminal');
+let terminal = $('#terminal');
+let terminalIcon = $('.terminalIcon');
 let underline = $('#terminalUnder');
 let textoMenu = $('.menu h2');
 let imgMenu = $('.menu img');
@@ -51,6 +52,13 @@ $(menu).animate({
 $(menuImgs).show(1250);
 $(menuImgs).fadeTo(1500,1);
 
+/// terminal icon
+$(terminal).animate({
+    opacity: "1"
+},3000);
+$(underline).animate({
+    opacity: "1"
+},4000);
 
 /// imagem fundo
 $(imgFundo1).animate({opacity:1}, 4500);
