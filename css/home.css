@@ -108,6 +108,7 @@ main {
     font-family: 'Monomaniac One', sans-serif;
     filter: drop-shadow(0 0 4px #ffffffcc);
     margin-top: -50px;
+    opacity: 0;
 }
 
 .terminalIcon {
@@ -157,25 +158,24 @@ main {
 .fundoBrilho {
     width: 65%;
     right: -650px;
-    /* right: -1000; */
     top: 0;
     z-index: -1;
     position: absolute;
-    /* filter: hue-rotate(85deg) saturate(89%) drop-shadow(0 0 30px #ff4d79) blur(1.9px); */
     filter: blur(1.25px) brightness(120%);
-    /* box-shadow: 0 0 50px 90px #4724c760; */
     opacity: 0;
+    animation: fundo 3.5s 3.5s infinite;
 }
 
 .setaAbaixo {
     position: absolute;
     transform: translate(250%,100%);
     top: 800px;
-    animation: descerLuz 5s infinite;
+    animation: descerLuz 5s 2.85s infinite;
     background: linear-gradient(to bottom, #bb002f65, var(--corPadrao));
     border-radius: 100px;
     width: 300px;
     height: 12px;
+    opacity: 0;
 }
 
 @keyframes descerLuz {
