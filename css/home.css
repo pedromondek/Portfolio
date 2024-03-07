@@ -110,30 +110,30 @@ main {
     margin-top: -50px;
 }
 
-.terminal {
+.terminalIcon {
+  opacity: 0;
+  position: absolute;
+}
+
+#terminal {
     font-size: 160px;
     font-family: 'Reggae One', system-ui;
-    position: absolute;
-    /* left: 525px; */
     left: -127px;
-    /* right: 175px; */
     top: -105px;
     color: var(--corPadrao);
     filter: drop-shadow(0 0 12px #ff4d79);
     transition: left 1.5s;
 }
 
+#terminalUnder {
+    animation: piscar 1.35s 4.25s infinite;
+}
 
 .imgContainer {
     display: flex;
     position: relative;
 }
 
-#terminalUnder {
-    animation: piscar 1.35s infinite;
-    position: absolute;
-    /* left: -100px; */
-}
 
 @keyframes piscar {
     0% {
