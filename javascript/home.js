@@ -1,11 +1,14 @@
 let menu = $('.menu');
 let menuLuz = $('#menuLuz');
+let menuImgs = $('.menuImgs');
 let terminal = $('.terminal');
 let underline = $('#terminalUnder');
 let textoMenu = $('.menu h2');
 let imgMenu = $('.menu img');
 let nomeJP = $('#nomeJP');
 let nomeEN = $('#nomeEN');
+let imgFundo1 = $('.fundo');
+let imgFundo2 = $('.fundoBrilho');
 
 
 // menu
@@ -34,17 +37,41 @@ $(menu).on('mouseout', function() {
 });
 
 
-// welcome
+// load
+
+/// menu
+$(menuLuz).animate({
+    top: '+=1000',
+    opacity: '1'
+},2500);
+$(menu).animate({
+    top: '+=1000',
+    opacity: '100%'
+},2000);
+$(menuImgs).show(1250);
+$(menuImgs).fadeTo(1500,1);
+
+
+/// imagem fundo
+$(imgFundo1).animate({opacity:1}, 4500);
+setTimeout(function () {
+    $(imgFundo2).css('animation', 'fundo 3.5s infinite');
+}, 3500)
+
+/// down scroll
+
+
+/// nome
 $(nomeJP).ready(function() {
     $(nomeJP).animate({
-        opacity: "1",
-    },2500);
+        opacity: "1"
+    },5000);
     setTimeout(function() {
         $(nomeJP).hide();
         $(nomeEN).css('transition', '3s');
         $(nomeEN).show();
         $(nomeEN).css('animation', 'glitch 2s reverse, glitchOpacity 1s, glitchFont 2s, glitchMovement 3s reverse');
-    }, 6500);
+    }, 9000);
 
     let check = false;
     
@@ -59,5 +86,5 @@ $(nomeJP).ready(function() {
                 check = false;
             }
         }, 2000);
-    }, 3500);
+    }, 6000);
 });
