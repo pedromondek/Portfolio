@@ -9,14 +9,14 @@
     position: fixed;
     z-index: 1;
     overflow: hidden;
-    top: -1000px;
+    top: -1300px;
     opacity: 0;
 }
 
 #menuLuz {
     display: block;
     position: absolute;
-    top: -1000;
+    top: -1300;
     left: -10px;
     width: 65px;
     height: 100vh;
