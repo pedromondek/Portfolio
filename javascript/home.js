@@ -13,9 +13,10 @@ let nomeJP = $('#nomeJP');
 let nomeEN = $('#nomeEN');
 
 let cargoJP = $('#cargoJP');
+let cargoPT = $('#cargoPT');
 
-let imgFundo1 = $('.fundo');
-let imgFundo2 = $('.fundoBrilho');
+let imgFundoA = $('.fundo');
+let imgFundoB = $('.fundoBrilho');
 
 let setaAbaixo = $('.setaAbaixo');
 
@@ -49,11 +50,11 @@ $(menu).on('mouseout', function() {
 // load
 /// menu
 $(menuLuz).animate({
-    top: '+=1000',
+    top: '+=1300',
     opacity: '1'
 },2500);
 $(menu).animate({
-    top: '+=1000',
+    top: '+=1300',
     opacity: '100%'
 },2000);
 $(menuImgs).show(1250);
@@ -68,7 +69,7 @@ $(underline).animate({
 },4000);
 
 /// imagem fundo
-$(imgFundo1).animate({opacity:1}, 4500);
+$(imgFundoA).animate({opacity:1}, 4500);
 
 /// down scroll
 $(setaAbaixo).animate({opacity:1},4500);
@@ -83,19 +84,19 @@ $(nomeJP).ready(function() {
         $(nomeEN).css('transition', '3s');
         $(nomeEN).show();
         $(nomeEN).css('animation', 'glitch 2s reverse, glitchOpacity 1s, glitchFont 2s, glitchMovement 3s reverse');
-    }, 9000);
+    }, 5500);
 
-    let check = false;
+    let checkName = false;
     
     setTimeout(function () {
         setInterval(function() {
-            if (check == false) {
+            if (checkName == false) {
                 $(nomeEN).removeClass('glitchClass');
-                check = true;
+                checkName = true;
             } else {
                 $(nomeEN).css('animation', '');
                 $(nomeEN).addClass('glitchClass');
-                check = false;
+                checkName = false;
             }
         }, 2000);
     }, 6000);
@@ -105,3 +106,24 @@ $(nomeJP).ready(function() {
 setTimeout(function() {
     $(cargoJP).fadeTo(4000,1);
 },450);
+setTimeout(function() {
+    $(cargoJP).hide();
+    $(cargoPT).css('transition', '3s');
+    $(cargoPT).show();
+    $(cargoPT).css('animation', 'glitch 2s reverse, glitchOpacity 1s, glitchFont 2s, glitchMovement 3s reverse');
+}, 6500);
+
+let checkCargo = false;
+    
+setTimeout(function () {
+    setInterval(function() {
+        if (checkCargo == false) {
+            $(cargoPT).removeClass('glitchClass');
+            checkCargo = true;
+        } else {
+            $(cargoPT).css('animation', '');
+            $(cargoPT).addClass('glitchClass');
+            checkCargo = false;
+        }
+    }, 3000);
+}, 5000);
