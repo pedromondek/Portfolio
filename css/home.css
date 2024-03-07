@@ -151,6 +151,7 @@ main {
     z-index: -2;
     position: absolute;
     filter: blur(1.25px) brightness(80%);
+    opacity: 0;
 }
 
 .fundoBrilho {
@@ -163,7 +164,7 @@ main {
     /* filter: hue-rotate(85deg) saturate(89%) drop-shadow(0 0 30px #ff4d79) blur(1.9px); */
     filter: blur(1.25px) brightness(120%);
     /* box-shadow: 0 0 50px 90px #4724c760; */
-    animation: fundo 2.25s infinite;
+    opacity: 0;
 }
 
 .setaAbaixo {
