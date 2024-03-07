@@ -89,6 +89,7 @@ main {
     font-size: 70px;
     font-family: 'Aldrich', sans-serif;
     filter: drop-shadow(0 0 4px #ffffffcc);
+    display: none;
 }
 
 #cargoEN {
@@ -109,6 +110,28 @@ main {
     filter: drop-shadow(0 0 4px #ffffffcc);
     margin-top: -50px;
     opacity: 0;
+    animation: glitch 5s 1s step-end;
+}
+
+#cargoJP::after, #cargoJP::before {
+  content: attr(data-text);
+  position: absolute;
+}
+
+#cargoJP::after {
+  z-index: -2;
+  color: rgb(214, 29, 252);
+  left: 0;
+  transform: translate(-15px,-10px);
+  white-space: nowrap;
+  animation: glitch 2.5s 1s step-end infinite, glitchOpacity 5s 1s step-end infinite, glitchFont 10s 1s step-end infinite, glitchMovementB 10s 1s step-end infinite;
+}
+
+#cargoJP::before {
+  z-index: -1;
+  color: rgb(248, 86, 175);
+  transform: translate(15px,10px);
+  animation: glitch 2.5s 1s step-end infinite, glitchOpacity 5s 1s step-end infinite, glitchFont 10s 1s step-end infinite, glitchMovementB 10s 1s step-end infinite;
 }
 
 .terminalIcon {
@@ -499,6 +522,55 @@ main {
       left: -55px;
     }
   }
+
+@keyframes glitchMovement {
+  0% {
+    top: 0px;
+    left: -40px;
+  }
+
+  15% {
+    top: 10px;
+    left: 15px;
+  }
+
+  60% {
+    top: 5px;
+    left: -20px;
+  }
+
+  75% {
+    top: -5px;
+    left: 20px;
+  }
+
+  100% {
+    top: 10px;
+    left: -55px;
+  }
+}
+
+@keyframes glitchMovementB {
+  0% {
+    transform: translate(-50px,0px);
+  }
+
+  15% {
+    transform: translate(45px,20px);
+  }
+
+  60% {
+    transform: translate(-25px,10px);
+  }
+
+  75% {
+    transform: translate(35px,-20px);
+  }
+
+  100% {
+    transform: translate(-60px,25px);
+  }
+}
 
 @keyframes glitchOpacity {
   0% {
