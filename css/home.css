@@ -124,14 +124,14 @@ main {
   left: 0;
   transform: translate(-15px,-10px);
   white-space: nowrap;
-  animation: glitch 2.5s 1s step-end infinite, glitchOpacity 5s 1s step-end infinite, glitchFont 10s 1s step-end infinite, glitchMovementB 10s 1s step-end infinite;
+  animation: glitch 2.5s 1s step-end infinite, glitchOpacity 5s 1s step-end infinite, glitchFont 6s 1s step-end infinite, glitchMovementB 6s 1s step-end infinite;
 }
 
 #cargoJP::before {
   z-index: -1;
   color: rgb(248, 86, 175);
   transform: translate(15px,10px);
-  animation: glitch 2.5s 1s step-end infinite, glitchOpacity 5s 1s step-end infinite, glitchFont 10s 1s step-end infinite, glitchMovementB 10s 1s step-end infinite;
+  animation: glitch 2.5s 1s step-end infinite, glitchOpacity 5s 1s step-end infinite, glitchFont 6s 1s step-end infinite, glitchMovementB 6s 1s step-end infinite;
 }
 
 .terminalIcon {
