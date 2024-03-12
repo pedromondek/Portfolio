@@ -33,8 +33,6 @@
     z-index: 2;
 }
 
-
-
 @keyframes luz {
     0% {
         background-position: 100% 100%;
@@ -45,9 +43,6 @@
 }
 
 .menu h2 {
-    /* font-family: 'Monomaniac One', sans-serif; */
-    /* font-family: 'Aldrich', sans-serif; */
-    /* font-family: 'Stick', sans-serif; */
     font-family: 'Reggae One', system-ui;
     font-size: 22px;
     filter: drop-shadow(5px 5px 8px #000000);
@@ -55,7 +50,20 @@
     color: #ffffff;
     border: 100px #000000;
     opacity: 0;
-    transition: 3s;
+    white-space: nowrap;
+    overflow-x: hidden;
+    letter-spacing: 0.5px;
+}
+
+.menu h2::before {
+    position: absolute;
+    content: "";
+    z-index: 3;
+    border-left: 2px solid #000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .menuImgs {
@@ -80,4 +88,16 @@
 }
 .menu ul li div img {
     margin: 0px 13px;
+}
+
+@keyframes typingMenu {
+    0% {
+        max-width: 0%;
+    }
+    40%, 60% {
+        max-width: 70%;
+      }
+      100% {
+        max-width: 100%;
+      }
 }
