@@ -3,6 +3,7 @@ let menuLuz = $('#menuLuz');
 let menuImgs = $('.menuImgs');
 
 let textoMenu = $('.menu h2');
+let textoMenuCursor = $('.menu h2::before');
 let imgMenu = $('.menu img');
 
 let terminal = $('#terminal');
@@ -15,6 +16,9 @@ let nomeEN = $('#nomeEN');
 let cargoJP = $('#cargoJP');
 let cargoPT = $('#cargoPT');
 
+let roles = $('.roles');
+let rolesB = $('.roles::before');
+
 let imgFundoA = $('.fundo');
 let imgFundoB = $('.fundoBrilho');
 
@@ -24,31 +28,42 @@ let setaAbaixo = $('.setaAbaixo');
 // menu
 $(imgMenu).css('transition','3s');
 
-// CRIAR ANIMAÇÃO DO MENU DESCENDO
+let checkMenu = false;
 
 $(menu).on('mouseover', function() {   
+    checkMenu = false;
     $(this).css('width', '15vw');
     $(this).css('transition', 'width 0.8s');
     $(menuLuz).css('width', '9vw');
     $(menuLuz).css('transition', 'width 0.8s');
-    $(textoMenu).css('opacity', '1');
-    $(textoMenu).css('transition', '3s');
+    // $(textoMenu).css('opacity', '1');
+    $(textoMenu).animate({opacity:1}, 100);
+    $(textoMenu).css('animation', 'typingMenu 1s .1s steps(12)');
+    $(textoMenuCursor).css('animation', 'typing 1s .1s steps(12)');
     $(imgMenu).css('filter', 'brightness(0) invert(1) drop-shadow(0 0 8px #ffffff)');
 });
 
+if(checkMenu==true) {
+    $(textoMenu).css('animation', '');
+    $(textoMenuCursor).css('animation', '');
+    setTimeout(function() {
+        $(textoMenu).css('animation', 'typingMenu 0.5s steps(12) reverse');
+        $(textoMenuCursor).css('animation', 'typingMenu .5s steps(12) reverse');
+    },200);
+}
+
 $(menu).on('mouseout', function() {
+    checkMenu = true;
     $(this).width('5.5%');
     $(this).css('transition', 'width 2s');
     $(menuLuz).width('65px');
     $(menuLuz).css('transition', 'width 2s');
-    $(textoMenu).css('opacity', '0');
     $(textoMenu).css('transition', '0.6s');
+    $(textoMenu).animate({opacity:0}, 200);
     $(imgMenu).css('filter', 'brightness(0) invert(0.65)');
 });
 
-
-// load
-/// menu
+// menu load
 $(menuLuz).animate({
     top: '+=1300',
     opacity: '1'
@@ -60,7 +75,7 @@ $(menu).animate({
 $(menuImgs).show(1250);
 $(menuImgs).fadeTo(1500,1);
 
-/// terminal icon
+// terminal icon
 $(terminal).animate({
     opacity: "1"
 },3000);
@@ -68,13 +83,13 @@ $(underline).animate({
     opacity: "1"
 },4000);
 
-/// imagem fundo
+// imagem fundo
 $(imgFundoA).animate({opacity:1}, 4500);
 
-/// down scroll
+// down scroll
 $(setaAbaixo).animate({opacity:1},4500);
 
-/// nome
+// nome
 $(nomeJP).ready(function() {
     $(nomeJP).animate({
         opacity: "1"
@@ -102,7 +117,7 @@ $(nomeJP).ready(function() {
     }, 6000);
 });
 
-/// cargo
+// cargo
 setTimeout(function() {
     $(cargoJP).fadeTo(4000,1);
 },450);
@@ -127,3 +142,22 @@ setTimeout(function () {
         }
     }, 3000);
 }, 5000);
+
+// roles
+function rolesChange() {
+    $(roles).text('--web');
+    setTimeout(function () {
+        $(roles).text('--backend');
+    }, 3150);
+    setTimeout(function () {
+        $(roles).text('--frontend');
+    }, 6000);
+    setTimeout(function () {
+        $(roles).text('--fullstack');
+    }, 9000);
+}
+
+setTimeout(function () {
+    $(roles).fadeTo(500,1);
+},9000);
+setInterval(rolesChange,12000);
