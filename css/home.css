@@ -134,6 +134,36 @@ main {
   animation: glitch 2.5s 1s step-end infinite, glitchOpacity 5s 1s step-end infinite, glitchFont 6s 1s step-end infinite, glitchMovementB 6s 1s step-end infinite;
 }
 
+.roles, .roles::before {
+  position: absolute;
+}
+
+.roles {
+  font-size: 50px;
+  font-family: 'Aldrich', sans-serif;
+  /* filter: drop-shadow(0 0 4px #ffffffcc); */
+  text-shadow: 0 0 4px #ffffffcc;
+  transform: translate(365px,100px);
+  letter-spacing: 2px;
+  opacity: 0;
+}
+
+.roles::before {
+  content: "";
+  /* opacity: 0; */
+  /* z-index: -2; */
+  background-color: #000000;
+  border-left: 2px solid var(--corPadrao);
+  top: 0;
+  /* left: 15%; depois dos -- */
+  /* left: 100%; */
+  left: 0;
+  /* width: 80%; */
+  width: 100%;
+  height: 100%;
+  animation: typing 3s 9s steps(11) infinite;
+}
+
 .terminalIcon {
   opacity: 0;
   position: absolute;
@@ -636,5 +666,16 @@ main {
     font-weight: 500;
     color: rgb(214, 29, 252);
     filter: blur(6px);
+  }
+}
+
+@keyframes typing {
+  40%, 60% {
+    left: calc(100% + 2px);
+    width: 70%;
+  }
+  100% {
+    left: 0%;
+    width: 100%;
   }
 }
