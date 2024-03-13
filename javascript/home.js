@@ -28,47 +28,41 @@ let setaAbaixo = $('.setaAbaixo');
 // menu
 $(imgMenu).css('transition','3s');
 
-let checkMenu = false;
-
-$(menu).on('mouseover', function() {   
-    checkMenu = false;
-    $(this).css('width', '15vw');
+$(menu).hover(function() {   
     $(this).css('transition', 'width 0.8s');
-    $(menuLuz).css('width', '9vw');
     $(menuLuz).css('transition', 'width 0.8s');
-    // $(textoMenu).css('opacity', '1');
-    $(textoMenu).animate({opacity:1}, 100);
-    $(textoMenu).css('animation', 'typingMenu 1s .1s steps(12)');
-    $(textoMenuCursor).css('animation', 'typing 1s .1s steps(12)');
+
+    $(this).css('width', '9vw');
+    $(menuLuz).css('width', '15vw');
+
+    $(textoMenu).css('opacity', 1);
+
     $(imgMenu).css('filter', 'brightness(0) invert(1) drop-shadow(0 0 8px #ffffff)');
-});
+    
+    $(textoMenu).removeClass('typingMenuClose');
+    $(textoMenu).addClass('typingMenuOpen');
+}, function () {
+    $(textoMenu).removeClass('typingMenuOpen');
+    $(textoMenu).addClass('typingMenuClose');
 
-if(checkMenu==true) {
-    $(textoMenu).css('animation', '');
-    $(textoMenuCursor).css('animation', '');
-    setTimeout(function() {
-        $(textoMenu).css('animation', 'typingMenu 0.5s steps(12) reverse');
-        $(textoMenuCursor).css('animation', 'typingMenu .5s steps(12) reverse');
-    },200);
-}
+    $(textoMenu).css('opacity', 0);
 
-$(menu).on('mouseout', function() {
-    checkMenu = true;
-    $(this).width('5.5%');
     $(this).css('transition', 'width 2s');
-    $(menuLuz).width('65px');
     $(menuLuz).css('transition', 'width 2s');
-    $(textoMenu).css('transition', '0.6s');
-    $(textoMenu).animate({opacity:0}, 200);
+
+    $(this).width('65px');
+    $(menuLuz).width('5.5%');
+
     $(imgMenu).css('filter', 'brightness(0) invert(0.65)');
-});
+    }
+);
 
 // menu load
-$(menuLuz).animate({
+$(menu).animate({
     top: '+=1300',
     opacity: '1'
 },2500);
-$(menu).animate({
+$(menuLuz).animate({
     top: '+=1300',
     opacity: '100%'
 },2000);
