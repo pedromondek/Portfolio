@@ -2,28 +2,32 @@
     --corPadrao: #c7244c;
 }
 
-.menu {
+#menuLuz {
     width: 5.5%;
     height: 100vh;
     background: linear-gradient(to left, #000000, #ff578144, var(--corPadrao));
-    position: fixed;
+    
     z-index: 1;
-    overflow: hidden;
+
     top: -1300px;
-    opacity: 0;
+    position: fixed;
 }
 
-#menuLuz {
+.menu {
     display: block;
-    position: absolute;
+    position: fixed;
+
     top: -1300;
     left: -10px;
+
     width: 65px;
     height: 100vh;
-    z-index: 1;
-    filter: blur(4px);
     border-radius: 25px;
     background: linear-gradient(to bottom, #96000048, #ff325467, #96000054), linear-gradient(to left,#fd2f5180, transparent);
+
+    overflow: hidden;
+    z-index: 1;
+    
     animation: luz 1.65s linear infinite;
 }
 
@@ -48,22 +52,12 @@
     filter: drop-shadow(5px 5px 8px #000000);
     z-index: 2;
     color: #ffffff;
-    border: 100px #000000;
-    opacity: 0;
+    /* border-right: 2px solid #424242; */
     white-space: nowrap;
-    overflow-x: hidden;
+    overflow: hidden;
     letter-spacing: 0.5px;
-}
-
-.menu h2::before {
-    position: absolute;
-    content: "";
-    z-index: 3;
-    border-left: 2px solid #000000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    transition: .8s;
+    margin-left: 5px;
 }
 
 .menuImgs {
@@ -87,17 +81,32 @@
     display: flex;
 }
 .menu ul li div img {
-    margin: 0px 13px;
+    margin: 0px 17px;
+    margin-left: 25px;
 }
 
-@keyframes typingMenu {
-    0% {
-        max-width: 0%;
+.typingMenuOpen {
+    animation: typingMenuA 1s steps(8);
+}
+.typingMenuClose {
+    animation: typingMenuB .8s steps(8);
+}
+
+@keyframes typingMenuA {
+    from {
+        border-right: 2px solid #2e2e2e;
+        width: 0ch;
     }
-    40%, 60% {
-        max-width: 70%;
-      }
-      100% {
-        max-width: 100%;
-      }
+    to {
+        width: 8ch;
+    }
+}
+@keyframes typingMenuB {
+    from {
+        border-right: 2px solid #2e2e2e;
+        width: 4.65ch;
+    }
+    to {
+        width: 0ch;
+    }
 }
