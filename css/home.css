@@ -141,7 +141,6 @@ main {
 .roles {
   font-size: 50px;
   font-family: 'Aldrich', sans-serif;
-  /* filter: drop-shadow(0 0 4px #ffffffcc); */
   text-shadow: 0 0 4px #ffffffcc;
   transform: translate(365px,100px);
   letter-spacing: 2px;
