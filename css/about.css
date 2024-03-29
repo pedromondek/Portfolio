@@ -1,0 +1,46 @@
+:root {
+    --corPadrao: #c7244c;
+}
+
+.about {
+    height: 100%;
+}
+
+.effectAbout {
+    position: relative;
+    transform: translate(90%,430%);
+    display: flex;
+    top: 0px;
+    left: 0;
+    background: linear-gradient(to bottom, #bb002f65, var(--corPadrao));
+    width: 300px;
+    height: 50px;
+}
+
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 285px;
+    top: 150px;
+    width: 600px;
+}
+
+#aboutPT {
+    font-size: 50px;
+    font-family: 'Stick', sans-serif;
+    letter-spacing: 2px; 
+    white-space: nowrap;
+    height: fit-content;
+    margin-bottom: 15px;
+}
+
+#textAboutPT {
+    font-size: 20px;
+    /* font-family: 'Monomaniac One', sans-serif;  */
+    /* font-family: 'Reggae One', system-ui; */
+    /* font-family: 'Stick', sans-serif; */
+    /* font-family: 'Audiowide', sans-serif; */
+    font-family: 'Aldrich', sans-serif;
+    /* font-family: 'Rajdhani', sans-serif; */
+}
