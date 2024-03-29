@@ -1,0 +1,26 @@
+:root {
+    --corPadrao: #c7244c;
+}
+
+/* ::-webkit-scrollbar {
+    background: transparent;
+    width: 8px;
+} */
+
+.scroll::-webkit-scrollbar {
+    background: transparent;
+    width: 8px;
+    /* display: none; */
+}
+
+/* ::-webkit-scrollbar-track {
+} */
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(199, 36, 76);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
