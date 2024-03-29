@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+    user-select: none;
     /* border: 1px solid red; */
 }
 
@@ -12,10 +13,13 @@
 
 body {
     background-color: #000000;
+    /* height: 100vh; */
+    overflow-x: hidden;
 }
 
 main {
     color: #ffffff;
+    height: 100%;
 }
 
 .cargoContainer {
@@ -220,30 +224,39 @@ main {
 
 .setaAbaixo {
     position: absolute;
-    transform: translate(250%,100%);
+    transform: translate(250%,30%);
     top: 800px;
+    animation-play-state: running;
     animation: descerLuz 5s 2.85s infinite;
     background: linear-gradient(to bottom, #bb002f65, var(--corPadrao));
     border-radius: 100px;
     width: 300px;
-    height: 12px;
+    height: 19px;
     opacity: 0;
 }
 
+.setaAbaixo:hover{
+  cursor: pointer;
+  animation-play-state: paused;
+  box-shadow: 1px 1px 15px #fa7193;
+  background-position-y: 60px;
+}
+
+
 @keyframes descerLuz {
     0% {
-        transform: translate(250%,100%);
+        transform: translate(250%,30%);
         background-position-y: 0px;
         filter: drop-shadow(0 0 12px var(--corPadrao));
     }
     50% {
-        transform: translate(250%,800%);
+        transform: translate(250%,500%);
         background-position-y: 60px;
-        filter: drop-shadow(1px 1px 20px #ff87a5);
+        box-shadow: 1px 1px 12px #fc5e85;
 
     }
     100% {
-        transform: translate(250%,100%);
+        transform: translate(250%,30%);
         background-position-y: 60px;
         filter: drop-shadow(0 0 12px var(--corPadrao));
     }
