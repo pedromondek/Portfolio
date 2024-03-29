@@ -1,3 +1,5 @@
+// let body = $('body');
+
 let menu = $('.menu');
 let menuLuz = $('#menuLuz');
 let menuImgs = $('.menuImgs');
@@ -82,6 +84,15 @@ $(imgFundoA).animate({opacity:1}, 4500);
 
 // down scroll
 $(setaAbaixo).animate({opacity:1},4500);
+
+$(setaAbaixo).on("click", function() {
+    $('html, body').animate({scrollTop: 977},'slow');                    
+});
+
+// scroll
+$(window).on("scroll", function() {
+    console.log($(window).scrollTop());
+});
 
 // nome
 $(nomeJP).ready(function() {
