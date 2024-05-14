@@ -35,7 +35,7 @@ $(menu).hover(function() {
     $(menuLuz).css('transition', 'width 0.8s');
 
     $(this).css('width', '9vw');
-    $(menuLuz).css('width', '15vw');
+    $(menuLuz).css('width', '13vw');
 
     $(textoMenu).css('opacity', 1);
 
