@@ -684,7 +684,7 @@ main {
 @keyframes typing {
   40%, 60% {
     left: calc(100% + 2px);
-    width: 70%;
+    width: 60%;
   }
   100% {
     left: 0%;
