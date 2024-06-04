@@ -33,53 +33,57 @@
 }
 
 .menu img {
-    scale: 130%;
+    /* scale: 130%; */
     filter: brightness(0) invert(0.65);
     z-index: 2;
 }
 
-@keyframes luz {
-    0% {
-        background-position: 100% 100%;
-    }
-    100% {
-        background-position: 0 1000;
-    }
-}
 
 .menu h2 {
     font-family: 'Reggae One', system-ui;
     font-size: 22px;
+    letter-spacing: 0.5px;
+
     filter: drop-shadow(5px 5px 8px #000000);
     z-index: 2;
     color: #ffffff;
     /* border-right: 2px solid #424242; */
     white-space: nowrap;
     overflow: hidden;
-    letter-spacing: 0.5px;
     transition: .8s;
     margin-left: 5px;
+    /* margin-bottom: 5px; */
+    /* height: 35px; */
 }
 
 .menuImgs {
     opacity: 0%;
     display: none;
+    width: 30px;
+    height: 30px;
+}
+
+#iconAbout {
+    /* scale: 0.995; */
+    scale: 1;
 }
 
 .menu ul {
     position: relative;
-    height: 100%;
     align-items: center;
-    margin-top: 10px;
+    height: 100%;
 }
 
 .menu ul li {
+    margin-bottom: 25px;
+    margin-top: 10px;
     list-style: none;
     cursor: pointer;
 }
 .menu ul li div {
     position: relative;
     display: flex;
+    height: 29px;
 }
 .menu ul li div img {
     margin: 0px 17px;
@@ -91,6 +95,15 @@
 }
 .typingMenuClose {
     animation: typingMenuB .8s steps(8);
+}
+
+@keyframes luz {
+    0% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 1000;
+    }
 }
 
 @keyframes typingMenuA {
