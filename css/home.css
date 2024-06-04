@@ -14,12 +14,17 @@
 body {
     background-color: #000000;
     /* height: 100vh; */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 main {
     color: #ffffff;
     height: 100%;
+}
+
+.homePage, .aboutPage {
+    height: 100%;
+    overflow: hidden;
 }
 
 .cargoContainer {
