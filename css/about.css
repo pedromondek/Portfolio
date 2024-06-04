@@ -78,3 +78,40 @@
     /* font-family: 'Rajdhani', sans-serif; */
     filter: drop-shadow(1px 1px 5px #cececeb6);
 }
+
+.imgAbout {
+    transform: translate(70%,-108%);
+    scale: 0.6;
+    filter: contrast(100%);
+}
+
+.imgMe {
+    transform: translate(35%,-796%);
+    border-radius: 50%;
+    scale: 0.122;
+    border: 50px solid #ffff;
+}
+
+.imgIaido {
+    transform: translate(274%,-2011%);
+    border-radius: 100%;
+    scale: 0.2;
+}
+
+.imgKendo {
+    transform: translate(286%,-2282%);
+    border-radius: 100%;
+    scale: 1.03;
+}
+
+.imgDice {
+    transform: translate(62.5%,-2349%);
+    border-radius: 100%;
+    scale: 0.4;
+}
+
+.imgProgramming {
+    transform: translate(468%,-2378%);
+    border-radius: 100%;
+    scale: 0.5;
+}
