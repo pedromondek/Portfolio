@@ -80,38 +80,45 @@
 }
 
 .imgAbout {
-    transform: translate(70%,-108%);
-    scale: 0.6;
-    filter: contrast(100%);
+    transform: translate(-185%,-360%);
+    scale: 0.15;
+    /* border: 20px solid #c7244c; */
+    /* filter: contrast(100%); */
+    top: 0;
+    /* left: 0; */
 }
 
 .imgMe {
-    transform: translate(35%,-796%);
+    transform: translate(37%,-1865%);
+    /* top: 0; */
+    /* transform: translate(35%,0%); */
     border-radius: 50%;
     scale: 0.122;
     border: 50px solid #ffff;
 }
 
 .imgIaido {
-    transform: translate(274%,-2011%);
+    transform: translate(270.5%,-3557%);
+    top: 0;
+    left: 0;
     border-radius: 100%;
     scale: 0.2;
 }
 
 .imgKendo {
-    transform: translate(286%,-2282%);
+    transform: translate(294.5%,-3900.6%);
     border-radius: 100%;
     scale: 1.03;
 }
 
 .imgDice {
-    transform: translate(62.5%,-2349%);
+    transform: translate(70%,-3982%);
     border-radius: 100%;
     scale: 0.4;
 }
 
 .imgProgramming {
-    transform: translate(468%,-2378%);
+    transform: translate(468%,-4003%);
     border-radius: 100%;
     scale: 0.5;
 }
