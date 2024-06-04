@@ -8,6 +8,9 @@ let textoMenu = $('.menu h2');
 let textoMenuCursor = $('.menu h2::before');
 let imgMenu = $('.menu img');
 
+let homeMenu = $('.home');
+let aboutMenu = $('.about');
+
 let terminal = $('#terminal');
 let terminalIcon = $('.terminalIcon');
 let underline = $('#terminalUnder');
@@ -86,6 +89,14 @@ $(imgFundoA).animate({opacity:1}, 4500);
 $(setaAbaixo).animate({opacity:1},4500);
 
 $(setaAbaixo).on("click", function() {
+    $('html, body').animate({scrollTop: 977},'slow');                    
+});
+
+$(homeMenu).on("click", function() {
+    $('html, body').animate({scrollTop: 0},'slow');                    
+});
+
+$(aboutMenu).on("click", function() {
     $('html, body').animate({scrollTop: 977},'slow');                    
 });
 
