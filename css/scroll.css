@@ -9,6 +9,7 @@
 
 .scroll::-webkit-scrollbar {
     background: transparent;
+
     width: 8px;
     /* display: none; */
 }
@@ -17,8 +18,9 @@
 } */
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(199, 36, 76);
     border-radius: 10px;
+    
+    background-color: rgb(199, 36, 76);
 }
 
 ::-webkit-scrollbar-button {
