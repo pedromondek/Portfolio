@@ -6,9 +6,10 @@
 #menuLuz {
     width: 5.5%;
     height: 100vh;
+
     background: linear-gradient(to left, #000000, #ff578144, var(--corPadrao));
     
-    z-index: 1;
+    z-index: -1;
 
     top: -1300px;
     position: fixed;
@@ -24,9 +25,10 @@
     width: 65px;
     height: 100vh;
     border-radius: 25px;
+    overflow: hidden;
+
     background: linear-gradient(to bottom, #96000048, #ff325467, #96000054), linear-gradient(to left,#fd2f5180, transparent);
 
-    overflow: hidden;
     z-index: 1;
     
     animation: luz 1.65s linear infinite;
@@ -35,6 +37,7 @@
 .menu img {
     /* scale: 130%; */
     filter: brightness(0) invert(0.65);
+
     z-index: 2;
 }
 
@@ -43,14 +46,17 @@
     font-family: 'Reggae One', system-ui;
     font-size: 21px;
     letter-spacing: 0.5px;
+
+    white-space: nowrap;
+    overflow: hidden;
     
     filter: drop-shadow(5px 5px 8px #000000);
     opacity: 0;
     color: #ffffff;
     /* border-right: 2px solid #424242; */
+
     z-index: 2;
-    white-space: nowrap;
-    overflow: hidden;
+
     transition: .8s;
     /* margin-left: px; */
     /* margin-bottom: 5px; */
@@ -60,6 +66,7 @@
 .menuImgs {
     opacity: 0%;
     display: none;
+
     width: 30px;
     height: 30px;
 }
@@ -72,18 +79,21 @@
 .menu ul {
     position: relative;
     align-items: center;
+
     height: 100%;
 }
 
 .menu ul li {
-    margin-bottom: 25px;
-    margin-top: 10px;
     list-style: none;
     cursor: pointer;
+
+    margin-bottom: 25px;
+    margin-top: 10px;
 }
 .menu ul li div {
     position: relative;
     display: flex;
+    
     height: 29px;
 }
 .menu ul li div img {
