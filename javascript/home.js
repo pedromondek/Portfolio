@@ -10,6 +10,7 @@ let imgMenu = $('.menu img');
 
 let homeMenu = $('.home');
 let aboutMenu = $('.about');
+let skillsMenu = $('.skills');
 
 let terminal = $('#terminal');
 let terminalIcon = $('.terminalIcon');
@@ -37,8 +38,8 @@ $(menu).hover(function() {
     $(this).css('transition', 'width 0.8s');
     $(menuLuz).css('transition', 'width 0.8s');
 
-    $(this).css('width', '9vw');
-    $(menuLuz).css('width', '13vw');
+    $(this).css('width', '12vw');
+    $(menuLuz).css('width', '15vw');
 
     $(textoMenu).css('opacity', 1);
 
@@ -87,18 +88,6 @@ $(imgFundoA).animate({opacity:1}, 4500);
 
 // down scroll
 $(setaAbaixo).animate({opacity:1},4500);
-
-$(setaAbaixo).on("click", function() {
-    $('html, body').animate({scrollTop: 977},'slow');                    
-});
-
-$(homeMenu).on("click", function() {
-    $('html, body').animate({scrollTop: 0},'slow');                    
-});
-
-$(aboutMenu).on("click", function() {
-    $('html, body').animate({scrollTop: 977},'slow');                    
-});
 
 // scroll
 $(window).on("scroll", function() {
