@@ -41,17 +41,18 @@
 
 .menu h2 {
     font-family: 'Reggae One', system-ui;
-    font-size: 22px;
+    font-size: 21px;
     letter-spacing: 0.5px;
-
+    
     filter: drop-shadow(5px 5px 8px #000000);
-    z-index: 2;
+    opacity: 0;
     color: #ffffff;
     /* border-right: 2px solid #424242; */
+    z-index: 2;
     white-space: nowrap;
     overflow: hidden;
     transition: .8s;
-    margin-left: 5px;
+    /* margin-left: px; */
     /* margin-bottom: 5px; */
     /* height: 35px; */
 }
@@ -87,7 +88,7 @@
 }
 .menu ul li div img {
     margin: 0px 17px;
-    margin-left: 24px;
+    margin-left: 22px;
 }
 
 .typingMenuOpen {
@@ -112,13 +113,14 @@
         width: 0ch;
     }
     to {
-        width: 8ch;
+        width: 12ch;
+        /* width: 8ch; */
     }
 }
 @keyframes typingMenuB {
     from {
         border-right: 4px solid rgb(214, 29, 252);
-        width: 4.65ch;
+        width: 5.25ch;
     }
     to {
         width: 0ch;
