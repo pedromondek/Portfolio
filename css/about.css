@@ -8,25 +8,29 @@
 
 .effectAbout {
     position: relative;
-    transform: translate(90%,430%);
     display: flex;
+    
+    transform: translate(90%,430%);
     /* top: 0px; */
     top: 185px;
     left: 36px;
+
     background: linear-gradient(to bottom, #bb002f80, var(--corPadrao));
     box-shadow: 0px 1px 10px 4px  #c7244db6;
+
     width: 350px;
     /* height: 50px; */
     height: 10px;
-
 }
 
 .effectAbout::after, .effectAbout::before {
     content: "";
+
     position: absolute;
-    transform: rotate(10deg);
     display: flex;
     flex-direction: column-reverse;
+    transform: rotate(10deg);
+
     background: linear-gradient(to bottom, #bb002f80, var(--corPadrao));
     box-shadow: 0px 1px 12px 1px #c7244db2;
 }
@@ -34,6 +38,7 @@
 .effectAbout::after {
     top: -57px;
     left: -55px;
+
     width: 12px;
     height: 65px;
 }
@@ -41,6 +46,7 @@
 .effectAbout::before {
     top: -41px;
     left: -30px;
+
     width: 10px;
     height: 45px;
 }
@@ -49,8 +55,10 @@
     display: flex;
     flex-direction: column;
     position: relative;
+
     left: 285px;
     top: 150px;
+
     width: 600px;
 }
 
@@ -59,41 +67,48 @@
     font-family: 'Stick', sans-serif;
     letter-spacing: 2px; 
     white-space: nowrap;
+
     height: fit-content;
     transform: translateY(-3%);
+
     margin-bottom: 25px;
     margin-left: 75px;
-    filter: drop-shadow(0px -2px 6px #cececeb6);
 
+    filter: drop-shadow(0px -2px 6px #cececeb6);
 }
 
 #textAboutPT {
     font-size: 20px;
-    margin-left: 25px;
     /* font-family: 'Monomaniac One', sans-serif;  */
     /* font-family: 'Reggae One', system-ui; */
     /* font-family: 'Stick', sans-serif; */
     /* font-family: 'Audiowide', sans-serif; */
     font-family: 'Aldrich', sans-serif;
     /* font-family: 'Rajdhani', sans-serif; */
+
+    margin-left: 25px;
+
     filter: drop-shadow(1px 1px 5px #cececeb6);
 }
 
 .imgAbout {
     transform: translate(-185%,-360%);
+    top: 0;
+    /* left: 0; */
+
     scale: 0.15;
     /* border: 20px solid #c7244c; */
     /* filter: contrast(100%); */
-    top: 0;
-    /* left: 0; */
 }
 
 .imgMe {
     transform: translate(37%,-1865%);
     /* top: 0; */
     /* transform: translate(35%,0%); */
-    border-radius: 50%;
+
     scale: 0.122;
+    
+    border-radius: 50%;
     border: 50px solid #ffff;
 }
 
@@ -101,24 +116,32 @@
     transform: translate(270.5%,-3557%);
     top: 0;
     left: 0;
+
     border-radius: 100%;
+
     scale: 0.2;
 }
 
 .imgKendo {
     transform: translate(294.5%,-3900.6%);
+
     border-radius: 100%;
+
     scale: 1.03;
 }
 
 .imgDice {
     transform: translate(70%,-3982%);
+
     border-radius: 100%;
+
     scale: 0.4;
 }
 
 .imgProgramming {
     transform: translate(468%,-4003%);
+
     border-radius: 100%;
+    
     scale: 0.5;
 }
