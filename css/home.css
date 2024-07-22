@@ -2,9 +2,11 @@
     border: 0;
     padding: 0;
     margin: 0;
+
     text-decoration: none;
     user-select: none;
-    /* border: 1px solid red; */
+
+    border: 1px solid red;
 }
 
 :root {
@@ -19,74 +21,94 @@ body {
 
 main {
     color: #ffffff;
+
     height: 100%;
 }
 
 #homePage, #aboutPage, #skillsPage {
     height: 100%;
+
     overflow: hidden;
 }
 
 .cargoContainer {
     width: 100%;
     height: 100vh;
+
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+
     overflow-y: hidden;
     overflow-x: hidden;
-    position: relative;
+    
 }
 
 .nomeCargo {
     align-items: center;
+
     width: 28vw;
     height: 18vh;
 }
 
 #nomeEN {
     font-size: 25;
+    font-family: 'Stick', sans-serif; 
+    white-space: nowrap;
+    letter-spacing: 10;
+
+    margin-bottom: 30px;
+    width: fit-content;
+
+    display: none;
+
     color: var(--corPadrao);
     filter: drop-shadow(0 0 12px #ff5781);
-    font-family: 'Stick', sans-serif; 
-    margin-bottom: 30px;
-    letter-spacing: 10;
-    width: fit-content;
-    white-space: nowrap;
-    display: none;
 }
 
 #nomeJP {
     font-size: 25;
+    font-family: 'Reggae One', system-ui;
+    letter-spacing: 10;
+    opacity: 0;
+
+    z-index: 0;
+
+    margin-bottom: 30px;
+    
     color: var(--corPadrao);
     filter: drop-shadow(0 0 12px #ff5781);
-    font-family: 'Reggae One', system-ui;
-    margin-bottom: 30px;
-    letter-spacing: 10;
-    z-index: 0;
+
     animation: glitch 5s step-end;
     animation-iteration-count: 2;
-    opacity: 0;
 }
 
 #nomeJP::after, #nomeJP::before {
     content: attr(data-text);
+
     position: absolute;
 }
 
 #nomeJP::after {
     z-index: -2;
-    color: rgb(214, 29, 252);
+
     left: -3px;
     top: -5px;
+
+    color: rgb(214, 29, 252);
+
     animation: glitch 5s step-end infinite, glitchOpacity 5s step-end infinite, glitchFont 7s step-end infinite, glitchMovement 10s step-end infinite;
 }
 
 #nomeJP::before {
     z-index: -1;
-    color: rgb(248, 86, 175);
+
     left: 3px;
     top: 5px;
+
+    color: rgb(248, 86, 175);
+
     animation: glitch 5s step-end infinite, glitchOpacity 5s step-end infinite, glitchFont 8s step-end infinite, glitchMovement 8s step-end infinite;
 }
 
@@ -97,8 +119,10 @@ main {
 #cargoPT {
     font-size: 70px;
     font-family: 'Aldrich', sans-serif;
-    filter: drop-shadow(0 0 4px #ffffffcc);
+
     display: none;
+
+    filter: drop-shadow(0 0 4px #ffffffcc);
 }
 
 #cargoEN {
@@ -106,40 +130,51 @@ main {
     /* font-family: 'Monomaniac One', sans-serif;  */
     /* font-family: 'Reggae One', system-ui; */
     /* font-family: 'Stick', sans-serif; */
-
     /* font-family: 'Audiowide', sans-serif; */
     font-family: 'Aldrich', sans-serif;
     /* font-family: 'Rajdhani', sans-serif; */
+
     filter: drop-shadow(0 0 4px #ffffffcc);
 }
 
 #cargoJP {
     font-size: 100px;
     font-family: 'Monomaniac One', sans-serif;
-    filter: drop-shadow(0 0 4px #ffffffcc);
-    margin-top: -50px;
+
     opacity: 0;
+
+    margin-top: -50px;
+
+    filter: drop-shadow(0 0 4px #ffffffcc);
+
     animation: glitch 5s 1s step-end;
 }
 
 #cargoJP::after, #cargoJP::before {
   content: attr(data-text);
+
   position: absolute;
 }
 
 #cargoJP::after {
   z-index: -2;
-  color: rgb(214, 29, 252);
+
   left: 0;
   transform: translate(-15px,-10px);
+
   white-space: nowrap;
+  color: rgb(214, 29, 252);
+
   animation: glitch 2.5s 1s step-end infinite, glitchOpacity 5s 1s step-end infinite, glitchFont 6s 1s step-end infinite, glitchMovementB 6s 1s step-end infinite;
 }
 
 #cargoJP::before {
   z-index: -1;
-  color: rgb(248, 86, 175);
+
   transform: translate(15px,10px);
+
+  color: rgb(248, 86, 175);
+
   animation: glitch 2.5s 1s step-end infinite, glitchOpacity 5s 1s step-end infinite, glitchFont 6s 1s step-end infinite, glitchMovementB 6s 1s step-end infinite;
 }
 
@@ -150,40 +185,51 @@ main {
 .roles {
   font-size: 50px;
   font-family: 'Aldrich', sans-serif;
-  text-shadow: 0 0 4px #ffffffcc;
-  transform: translate(365px,100px);
   letter-spacing: 2px;
+
+  transform: translate(365px,100px);
+
   opacity: 0;
+
+  text-shadow: 0 0 4px #ffffffcc;
 }
 
 .roles::before {
   content: "";
+
   /* opacity: 0; */
   /* z-index: -2; */
-  background-color: #000000;
-  border-left: 2px solid var(--corPadrao);
   top: 0;
   /* left: 15%; depois dos -- */
   /* left: 100%; */
   left: 0;
+
   /* width: 80%; */
   width: 100%;
   height: 100%;
+
+  background-color: #000000;
+  border-left: 2px solid var(--corPadrao);
+
   animation: typing 3s 9s steps(11) infinite;
 }
 
 .terminalIcon {
   opacity: 0;
+
   position: absolute;
 }
 
 #terminal {
     font-size: 160px;
     font-family: 'Reggae One', system-ui;
+
     left: -127px;
     top: -105px;
+
     color: var(--corPadrao);
     filter: drop-shadow(0 0 12px #ff4d79);
+
     transition: left 1.5s;
 }
 
@@ -208,43 +254,60 @@ main {
 
 .fundo {
     width: 65%;
+
     right: -650px;
     top: 0;
+
     z-index: -2;
-    position: absolute;
-    filter: blur(1.25px) brightness(80%);
     opacity: 0;
+
+    position: absolute;
+
+    filter: blur(1.25px) brightness(80%);
 }
 
 .fundoBrilho {
     width: 65%;
+
     right: -650px;
     top: 0;
+
     z-index: -1;
-    position: absolute;
-    filter: blur(1.25px) brightness(120%);
     opacity: 0;
+
+    position: absolute;
+
+    filter: blur(1.25px) brightness(120%);
+
     animation: fundo 3.5s 3.5s infinite;
 }
 
 .setaAbaixo {
     position: absolute;
+
     transform: translate(250%,30%);
     top: 800px;
-    animation-play-state: running;
-    animation: descerLuz 5s 2.85s infinite;
-    background: linear-gradient(to bottom, #bb002f65, var(--corPadrao));
-    border-radius: 100px;
+
     width: 300px;
     height: 19px;
+
+    border-radius: 100px;
+
     opacity: 0;
+
+    background: linear-gradient(to bottom, #bb002f65, var(--corPadrao));
+
+    animation-play-state: running;
+    animation: descerLuz 5s 2.85s infinite;
 }
 
 .setaAbaixo:hover{
   cursor: pointer;
-  animation-play-state: paused;
+
   box-shadow: 1px 1px 15px #fa7193;
   background-position-y: 60px;
+  
+  animation-play-state: paused;
 }
 
 
