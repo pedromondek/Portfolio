@@ -22,7 +22,7 @@ main {
     height: 100%;
 }
 
-.homePage, .aboutPage {
+#homePage, #aboutPage, #skillsPage {
     height: 100%;
     overflow: hidden;
 }
