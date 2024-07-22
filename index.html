@@ -19,21 +19,33 @@
 </head>
 <body class="scroll">
     <span style="position: relative;display:inline-block;right:-40vw;color: white;">SITE EM DESENVOLVIMENTO!</span>
-    <main class="homePage">
+    <main id="homePage">
         <span id="menuLuz"></span>
         <div class="menu">
         <ul>
             <li>
-                <div class="home">
-                    <img class="menuImgs" src="./img/menu/home_logo.svg" alt="">
-                    <h2>Home</h2>
-                </div>
+                <a href="#homePage">
+                    <div class="home">
+                        <img class="menuImgs" src="./img/menu/home_logo.svg" alt="">
+                        <h2>Home</h2>
+                    </div>
+                </a>
             </li>
             <li>
-                <div class="about">
-                    <img class="menuImgs" id="iconAbout" src="./img/menu/icon-fingerprint.png" alt="">
-                    <h2>Sobre</h2>
-                </div>
+                <a href="#aboutPage">
+                    <div class="about">
+                        <img class="menuImgs" id="iconAbout" src="./img/menu/icon-fingerprint.png" alt="">
+                        <h2>Sobre</h2>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#skillsPage">
+                    <div class="skills">
+                        <img class="menuImgs" id="iconSkills" src="./img/menu/microchip-solid.svg" alt="">
+                        <h2>Tecnologias</h2>
+                    </div>
+                </a>
             </li>
         </ul>
         </div>
@@ -54,9 +66,9 @@
             <img class="fundo" src="./img/home/cyberpunk-city-degrade2.png" alt="">
             <img class="fundoBrilho" src="./img/home/cyberpunk-city-brilho.png" alt="">
         </div>
-        <span class="setaAbaixo"></span>
+        <a href="#aboutPage" class="setaAbaixo"></a>
     </main> 
-    <main class="aboutPage">
+    <main id="aboutPage">
         <span class="effectAbout"></span>
         <div class="aboutMe">
             <h3 id="aboutPT">Sobre Mim</h3>
@@ -78,6 +90,11 @@
         <img class="imgDice" src="./img/about/rpg-dice.png" alt="">
         <img class="imgProgramming" src="./img/about/programming-icon.png" alt="">
         <!-- <img class="" src="" alt=""> -->
+    </main>
+    <main id="skillsPage">
+        <div>
+
+        </div>
     </main>
    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
    <script src="./javascript/home.js"></script>
