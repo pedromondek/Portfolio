@@ -176,3 +176,285 @@ setTimeout(function () {
     $(roles).fadeTo(500,1);
 },9000);
 setInterval(rolesChange,12000);
+
+// Carrousel Skills Types
+let leftSkill = 0;
+let selectedSkill = 1;
+let rightSkill = 2;
+let temp;
+let activeSection;
+
+function mainSectionSkill() {
+    if ($(skillsSections[selectedSkill]).text() === 'Front-end') {
+        skillActive = true;
+        showSkill();
+
+        $(skillBE).hide();
+        $(skillTool).hide();
+        $(skillFE).show();
+
+        activeSection = 'skillFE';
+    } else if ($(skillsSections[selectedSkill]).text() === 'Back-end') {
+        skillActive = true;
+        showSkill();
+        
+        $(skillFE).hide();
+        $(skillTool).hide();
+        $(skillBE).show();
+
+        activeSection = 'skillBE';
+    } else if($(skillsSections[selectedSkill]).text() === 'Tools') {
+        skillActive = true;
+        showSkill();
+        
+        $(skillBE).hide();
+        $(skillFE).hide();
+        $(skillTool).show();
+
+        activeSection = 'skillTool';
+    }
+}
+
+$('#skillsPage').ready(function() {
+    mainSectionSkill();
+})
+
+
+// Click Events to change main section
+$(skillsSections[rightSkill]).on("click", function() {
+    temp = $(skillsSections[leftSkill]).html();
+    $(skillsSections[leftSkill]).html($(skillsSections[selectedSkill]).html());
+    $(skillsSections[selectedSkill]).html($(skillsSections[rightSkill]).html());
+    $(skillsSections[rightSkill]).html(temp);
+
+    mainSectionSkill();
+});
+
+$(skillsPlayRight).on("click", function() {
+    temp = $(skillsSections[leftSkill]).html();
+    $(skillsSections[leftSkill]).html($(skillsSections[selectedSkill]).html());
+    $(skillsSections[selectedSkill]).html($(skillsSections[rightSkill]).html());
+    $(skillsSections[rightSkill]).html(temp);
+
+    mainSectionSkill();
+});
+
+$(skillsSections[leftSkill]).on("click", function() {
+    temp = $(skillsSections[rightSkill]).html();
+    $(skillsSections[rightSkill]).html($(skillsSections[selectedSkill]).html());
+    $(skillsSections[selectedSkill]).html($(skillsSections[leftSkill]).html());
+    $(skillsSections[leftSkill]).html(temp);
+
+    mainSectionSkill();
+});
+
+$(skillsPlayLeft).on("click", function() {
+    temp = $(skillsSections[rightSkill]).html();
+    $(skillsSections[rightSkill]).html($(skillsSections[selectedSkill]).html());
+    $(skillsSections[selectedSkill]).html($(skillsSections[leftSkill]).html());
+    $(skillsSections[leftSkill]).html(temp);
+
+    mainSectionSkill();
+});
+
+// Skill Selected style
+$(skillsSections[selectedSkill]).css({
+    'font-size': '40px',
+    'color': '#ffffff',
+    'filter': 'drop-shadow(0px -2px 6px #cececeb6)',
+    'border-bottom': 'solid 2px #c7244c'
+});
+
+// Skill Active
+let skillOn;
+let skillOff;
+let skillActive = false;
+
+// show all certificates about the skills and projects
+function showSkill(tecnology, section) {
+    if(activeSection === 'skillFE' || section === 0) {
+        section = 0;
+        skillOn = $(skillFE).index(tecnology);
+        skillOff = $(skillFE).not(tecnology);
+    } else if(activeSection === 'skillBE' || section === 1) {
+        section = 1;
+        skillOn = $(skillBE).index(tecnology);
+        skillOff = $(skillBE).not(tecnology);
+    } else if(activeSection === 'skillTool' || section === 1) {
+        section = 2;
+        skillOn = $(skillTool).index(tecnology);
+        skillOff = $(skillTool).not(tecnology);
+    }
+
+    var ls = tecnology;
+    ls = $(ls).clone().children().remove().end().text().trim().toLowerCase();
+
+    if (skillActive === false) {
+        skillActive = true;
+        
+        $('.skillsListContainer').css('opacity', '1');
+        
+        $(skillOff).each(function(index, element) {
+            var skillOffArray = $(element).contents().filter(function () {
+                return this.nodeType === 3;                
+            }).text().trim();
+
+            $('.skillsListContainer ul').append($("<li class=otherSkills>").text(skillOffArray));
+        });
+        
+        $(skillOff).hide();
+        
+        if (section === 0) {
+            $(skillFE).addClass('skillActive');
+            $('.skillActive').find("ul").show();
+        } else if(section === 1) {
+            $(skillBE).addClass('skillActive');
+            $('.skillActive').find("ul").show();
+        } else if(section === 2) {
+            $(skillTool).addClass('skillActive');
+            $('.skillActive').find("ul").show();
+        };
+        
+        $('.imgSkill').css({
+            'display': 'block',
+            'transform': 'translate(-2770%,40%)',
+            'filter': 'brightness(100%)'
+        });
+       
+        // DESENVOLVENDO PROJECTS RELACIONADO A SKILL
+        $('.projectList').not("." + ls).hide();
+
+        if (document.querySelectorAll('.' + ls).length < 3) {
+            $('.scrollProjects').hide();
+            $('.projectCard').css({
+                'top': '21%',
+                'height': '84%'
+        });
+        };
+
+    } else {
+        $('.skillsListContainer').css('opacity', '0');
+        
+        $(skillOff).each(function(index, element) {
+            $('.skillsListContainer ul li').remove();
+        });
+        
+        $('.imgSkill').css({
+            'display': 'none',
+            'transform': 'translate(0,-4.1%)',
+            'filter': 'brightness(80%)'
+        });
+        
+        if (section === 0) {
+            $('.skillActive').find("ul").hide();
+            $(skillFE).removeClass('skillActive');
+        } else if(section === 1) {
+            $('.skillActive').find("ul").hide();
+            $(skillBE).removeClass('skillActive');
+        } else if(section === 2) {
+            $('.skillActive').find("ul").hide();
+            $(skillTool).removeClass('skillActive');
+        };
+
+        $(skillOff).show();
+        $('.projectList').show();
+        $('.projectCard').css({
+            'top': '15%',
+            'height': '84%'
+        });
+        $('.scrollProjects').show();
+        
+        skillActive = false;
+    };
+};
+
+$(skill).on("click", function() {
+    showSkill(this);
+});
+
+// open & close certificate
+var tempCertificate;
+
+$('.courses').each(function(i,e) {
+    $(e).on("click", function() {
+        event.stopPropagation(); // replace later other way for event.
+    
+        $('.certificate').each(function(i,el) {
+            var eClass = $(e).attr('class').split(' ');
+            var elClass = $(el).attr('class').split(' ');
+
+            if(eClass[1] === elClass[1]) {
+                tempCertificate = el;
+
+                $(tempCertificate).show();
+                $('.certificateContainer').show();
+
+                $('body').animate({
+                    scrollTop: $('#skillsPage').offset().top
+                });
+
+                $('body').css('overflow-y', 'hidden');
+            };
+        });
+    });
+});
+
+$('.certificateContainer').not('.certificate', '.certificateContainer').on("click", function() {
+    $('.certificate').hide();
+    $('.certificateContainer').hide();
+    $('body').css('overflow-y', 'visible');
+});
+
+$('.skillsListContainer ul').each(function (i,element) {
+    $(element).on("click", "li", function() {
+        tec = $(this).text().trim();
+
+        $(skill).each(function(i,e) {
+            if ($(e).clone().find('ul').remove().end().text().trim() === tec) {
+                tecnologySkill = e;
+            }
+        });
+        
+        showSkill();
+        showSkill(tecnologySkill);
+    });
+});
+
+// scroll-x projects
+$('#scrollProjectsLeft').on("click", function() {
+    $('.projectsContainer').scrollLeft($('.projectsContainer').scrollLeft() - 507);
+});
+
+$('#scrollProjectsRight').on("click", function() {
+    $('.projectsContainer').scrollLeft($('.projectsContainer').scrollLeft() + 507);
+});
+
+// open & close project detailed
+var tempProject;
+
+$('.projectList').each(function(i,e) {
+    $(e).on("click", function() {
+        $('.certificate').each(function(i,el) { // trocar certificate por projeto descrito
+            var eClass = $(e).attr('class').split(' ');
+            var elClass = $(el).attr('class').split(' ');
+
+            if(eClass[1] === elClass[1]) {
+                tempProject = el;
+
+                $(tempProject).show();
+                $('.projectDetailedContainer').show();
+
+                $('body').animate({
+                    scrollTop: $('#skillsPage').offset().top // definir altura desejada
+                });
+
+                $('body').css('overflow-y', 'hidden');
+            };
+        });
+    });
+});
+// modificar certificate para projeto
+$('.projectDetailedContainer').not('.certificate', '.projectDetailedContainer').on("click", function() {
+    $('.projectDetailedContainer').hide();
+    $('body').css('overflow-y', 'visible');
+});
