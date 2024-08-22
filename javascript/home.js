@@ -104,11 +104,6 @@ $(imgFundoA).animate({opacity:1}, 4500);
 // down scroll
 $(setaAbaixo).animate({opacity:1},4500);
 
-// scroll
-$(window).on("scroll", function() {
-    console.log($(window).scrollTop());
-});
-
 // nome
 $(nomeJP).ready(function() {
     $(nomeJP).animate({
