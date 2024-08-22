@@ -10,7 +10,7 @@
 ----------
 
 > [!NOTE]
-> Caso tenha preferência de ler este documento em "PT-BR :brazil:", sinta-se livre para ler em **LEIAME.md**
+> Caso tenha preferência de ler este documento em "PT-BR :brazil:", sinta-se livre para ler **[aqui (LEIAME.md)](LEIAME.md)**
 
 > [!WARNING]
 > Please remember that the site is **under development**, so there may be *errors, bugs, issues and imperfections*, be sure to check out the roadmap for more information
@@ -52,7 +52,7 @@ https://github.com/user-attachments/assets/7790c2a4-2755-44e0-8116-64dd19b0bd27
 <br>
 
 ### Sidebar & About Me Page
-- The "About Me" area does not have anything animated yet, so it only has a static part.
+- The "About Me" area does not have anything animated **yet**, so it only has a static part.
 - The sidebar has some animations that are always active to give the impression that there is a light running through it.
 - The sidebar has animations for expansion and reduction, which also have animations for its content that will be typed and better highlighted when expanded and which obviously also serves for navigation on the site.
 
@@ -98,7 +98,7 @@ This roadmap provides a general (not detailed) overview of the planned steps and
 
 Below you will find the main phases of the project along with the tasks:
 
-- [x] Sidebar
+- [ ] Sidebar
   - [ ] Structure
     - [x] Add Home Page to sidebar
     - [x] Add About Me Page to sidebar

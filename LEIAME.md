@@ -10,7 +10,7 @@
 ----------
 
 > [!NOTE]
-> If you prefer to read this document in "EN-US :us:", feel free to read it in **README.md**
+> If you prefer to read this document in "EN-US :us:", feel free to read it in **[here (README.md)](README.md)**
 
 > [!WARNING]
 > Por favor, lembre-se de que o site está **em desenvolvimento**, então pode haver *erros, bugs, problemas e imperfeições*, não deixe de conferir o roadmap para mais informações.
@@ -98,7 +98,7 @@ Este roadmap fornece uma visão geral (não detalhada) das etapas planejadas e m
 
 Abaixo você encontrará as principais fases do projeto juntamente com as tarefas:
 
-- [x] Barra Lateral
+- [ ] Barra Lateral
   - [ ] Estrutura
     - [x] Adicionar "Home Page" à barra lateral
     - [x] Adicionar "Sobre Mim" à barra lateral
