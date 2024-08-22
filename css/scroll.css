@@ -30,3 +30,38 @@
 html {
     scroll-behavior: smooth;
 }
+
+.skillsContainer::-webkit-scrollbar {
+    background: transparent;
+    width: 8px;
+}
+
+/* #skillsPage::-webkit-scrollbar {
+    display: none;
+} */
+
+.skillsListContainer::-webkit-scrollbar {
+    background: transparent;
+    width: 8px;
+}
+
+.coursesContainer::-webkit-scrollbar {
+    background: transparent;
+    width: 4px;
+
+    /* background-color: #d61dfc */
+}
+
+.projectsContainer::-webkit-scrollbar {
+    background: transparent;
+    height: 8px;
+
+    background-color: #d61dfc
+}
+
+.projectsContainer::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 0px;
+
+    background-color: #c7244c
+}
