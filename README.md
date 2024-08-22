@@ -9,10 +9,10 @@
 
 ----------
 
-> [!NOTE] Note: Language/Idioma
+> [!NOTE]
 > Caso tenha preferência de ler este documento em "PT-BR :brazil:", sinta-se livre para ler em **LEIAME.md**
 
-> [!WARNING] Warning: Work in Progress
+> [!WARNING]
 > Please remember that the site is **under development**, so there may be *errors, bugs, issues and imperfections*, be sure to check out the roadmap for more information
 
 <br>
@@ -47,7 +47,7 @@ Which you can check in the repository description or by accessing <u>**[here](ht
 - When we enter the site, some "fade-in" and "glitch" animations show the presentation of the site, which is the "Home Page".
 - Animated button to scroll down to "About Me Page".
 
-
+https://github.com/user-attachments/assets/7790c2a4-2755-44e0-8116-64dd19b0bd27
 
 <br>
 
@@ -56,7 +56,7 @@ Which you can check in the repository description or by accessing <u>**[here](ht
 - The sidebar has some animations that are always active to give the impression that there is a light running through it.
 - The sidebar has animations for expansion and reduction, which also have animations for its content that will be typed and better highlighted when expanded and which obviously also serves for navigation on the site.
 
-
+https://github.com/user-attachments/assets/145d1e1b-e958-4ce1-bfad-e7f492424da6
 
 <br>
 
@@ -157,6 +157,8 @@ See the [open issues](https://github.com/pedromondek/Portfolio/issues) for a ful
 <a href="mailto:phmondek@gmail.com">
   <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
 </a>
+
+<br>
 
 <br>
 
