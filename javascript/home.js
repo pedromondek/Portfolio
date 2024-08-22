@@ -1,5 +1,4 @@
-// let body = $('body');
-
+// main menu
 let menu = $('.menu');
 let menuLuz = $('#menuLuz');
 let menuImgs = $('.menuImgs');
@@ -8,9 +7,10 @@ let textoMenu = $('.menu h2');
 let textoMenuCursor = $('.menu h2::before');
 let imgMenu = $('.menu img');
 
+// UI menu
 let homeMenu = $('.home');
 let aboutMenu = $('.about');
-let skillsMenu = $('.skills');
+let skillsMenu = $('.skillsMenu');
 
 let terminal = $('#terminal');
 let terminalIcon = $('.terminalIcon');
