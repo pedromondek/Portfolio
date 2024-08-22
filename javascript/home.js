@@ -30,6 +30,21 @@ let imgFundoB = $('.fundoBrilho');
 
 let setaAbaixo = $('.setaAbaixo');
 
+// skills
+let skillsSections = $('.skillsSections');
+let skillsPlayLeft = $('#skillsPlayLeft');
+
+let skill = $('.skill');
+let skillClosedBrackets = ('.skill::after');
+let skillBE = $('.backend');
+let skillFE = $('.frontend');
+let skillTool = $('.tools');
+
+//footer
+$(document).ready(function() {
+    let today = new Date();
+    $('footer a').append(' ' + today.getFullYear());
+});
 
 // menu
 $(imgMenu).css('transition','3s');
