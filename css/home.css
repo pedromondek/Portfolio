@@ -19,16 +19,31 @@ body {
     /* overflow-x: hidden; */
 }
 
+footer {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  
+  /* margin-top: 50px; */
+  margin-left: 3vw;
+}
+
 main {
     color: #ffffff;
 
     height: 100%;
 }
 
-#homePage, #aboutPage, #skillsPage {
+#homePage, #aboutPage {
     height: 100%;
 
     overflow: hidden;
+}
+
+#skillsPage {
+  height: 113%;
+
+  overflow: hidden;
 }
 
 .cargoContainer {
