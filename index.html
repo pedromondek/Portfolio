@@ -23,39 +23,63 @@
     <main id="homePage">
         <span id="menuLuz"></span>
         <div class="menu">
-        <ul>
-            <li>
-                <a href="#homePage">
-                    <div class="home">
-                        <img class="menuImgs" src="./img/menu/home_logo.svg" alt="">
-                        <h2>Home</h2>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#aboutPage">
-                    <div class="about">
-                        <img class="menuImgs" id="iconAbout" src="./img/menu/icon-fingerprint.png" alt="">
-                        <h2>Sobre Mim</h2>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#skillsPage">
-                    <div class="skillsMenu">
-                        <img class="menuImgs" id="iconSkills" src="./img/menu/microchip-solid.svg" alt="">
-                        <h2>Habilidades</h2>
-                    </div>
-                </a>
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    <a href="#homePage">
+                        <div class="home">
+                            <img class="menuImgs" src="./img/menu/home_logo.svg" alt="">
+                            <h2 class="translation" data-text="homeMenu">Início</h2>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#aboutPage">
+                        <div class="about">
+                            <img class="menuImgs" id="iconAbout" src="./img/menu/icon-fingerprint.png" alt="">
+                            <h2 class="translation" data-text="aboutMeMenu">Sobre Mim</h2>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skillsPage">
+                        <div class="skillsMenu">
+                            <img class="menuImgs" id="iconSkills" src="./img/menu/microchip-solid.svg" alt="">
+                            <h2 class="translation" data-text="skillsSideBar">Habilidades</h2>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="languageTitle">
+                            <img class="menuImgs" id="iconSkills" src="./img/menu/globe-lang.svg" alt="">
+                            <h2 class="translation" data-text="languageOptions">Idioma</h2>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div>
+                            <ul class="languageContainer">
+                                <div id="containerPTBR">
+                                    <img class="menuImgs" id="iconPTBR" src="./img/menu/sd-card-solid-br.svg" alt="">
+                                    <a class="languages translation" data-text="optionPortuguese">Português</a>
+                                </div>
+                                <div id="containerENUS">
+                                    <img class="menuImgs" id="iconENUS" src="./img/menu/sd-card-solid-usa.svg" alt="">
+                                    <a class="languages translation" data-text="optionEnglish">Inglês</a>
+                                </div>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="cargoContainer">
             <div class="nomeCargo">
                 <h4 id="nomeEN">PEDRO MONDEK</h4>
                 <h4 id="nomeJP" data-text="ペドロ モンデキ">ペドロ モンデキ</h4>
                 <div class="imgContainer">
-                    <h2 id="cargoPT">Desenvolvedor</h2>
+                    <h2 class="translation" id="cargoPT" data-text="homeDeveloper">Desenvolvedor</h2>
                     <!-- <h2 id="cargoEN">Developer</h2> -->
                     <h2 id="cargoJP" data-text="開発者">開発者</h2>
                     <h3 class="roles">--fullstack</h3>
@@ -72,15 +96,37 @@
     <main id="aboutPage">
         <span class="effectAbout"></span>
         <div class="aboutMe">
-            <h3 id="aboutPT">Sobre Mim</h3>
-            <p id="textAboutPT">Olá! Primeiramente obrigado por visitar meu portifólio, sou Desenvolvedor Full Stack, atualmente estou cursando Ciência da Computação (Bacharelado) na Universidade Positivo de Londrina e morando em Londrina-PR. Minha principal paixão e conhecimento atualmente é na área de desenvolvimento Web, como JavaScript e jQuery. 
+            <h3 class="translation" id="aboutPT" data-text="aboutMeTitle">Sobre Mim</h3>
+            <p data="aboutMeTextDescription" id="textAboutPT">
+                <a class="translation" data-text="aboutTextOne">
+                    Olá! Primeiramente obrigado por visitar meu Portfolio, sou Desenvolvedor Full Stack, atualmente estou cursando Ciência da Computação (Bacharelado) na Universidade Positivo de Londrina e morando em Londrina-PR. Minha principal paixão e conhecimento atualmente é na área de desenvolvimento Web, como JavaScript e jQuery. 
+                </a>
                 <br><br>
-                Também tenho conhecimentos em Python, Front-end, SQL, Java, Git, Microsoft Office e conhecimentos básicos em Hardware e Linux. E atualmente tenho trabalhado em mods de jogos, websites.
+                <a class="translation" data-text="aboutTextTwo">
+                    Também tenho conhecimentos em Python, Front-end, SQL, Java, Git, Microsoft Office e conhecimentos básicos em Hardware e Linux. E atualmente tenho trabalhado em mods de jogos, websites.
+                </a>
                 <br><br>
-                Em meu tempo livre jogo e mestro RPG de mesa desde 2019, programo algumas coisas para o FoundryVTT, amo jogar jogos, inclusive minha inicialização para aprender sobre computadores e programação foi a partir de jogos. 
+                <a class="translation" data-text="aboutTextThree">
+                    Em meu tempo livre jogo e mestro RPG de mesa desde 2019, programo algumas coisas para o FoundryVTT, amo jogar jogos, inclusive minha inicialização para aprender sobre computadores e programação foi a partir de jogos. 
+                </a>
                 <br><br>
-                E além disso, sou atleta pelo time de Londrina desde 2022 de Kendo e Iaido, uma arte marcial e esporte japonês e faço parte da diretoria (Tesoureiro) do dojo Aka Ashi.
+                <a class="translation" data-text="aboutTextFour">
+                    E além disso, sou atleta pelo time de Londrina desde 2022 de Kendo e Iaido, uma arte marcial e esporte japonês e faço parte da diretoria (Tesoureiro) do dojo Aka Ashi.
+                </a>
             </p>
+            <div class="socialContainer">
+                <div>
+                    <a href="https://github.com/pedromondek/" target="_blank">
+                        <img class="socials" src="img/about/github-icon.svg" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/in/pedromondek/" target="_blank">
+                        <img class="socials" src="img/about/linkedin-icon.svg" alt="">
+                    </a>
+                    <a href="mailto:phmondek@gmail.com" target="_blank">
+                        <img class="socials" src="img/about/mail-icon.svg" alt="" target="_blank">
+                    </a>
+                </div>
+            </div>
         </div>
         <img class="imgAbout" src="./img/about/about-me-quadro@2x.png" alt="">
         <!-- <img class="imgAbout" src="/img/about/about-me-quadro-2.png" alt=""> -->
@@ -94,7 +140,7 @@
     </main>
     <main id="skillsPage">
         <div class="skillsLabel">
-            <h3 id="skillsTitlePT">Habilidades</h3>
+            <h3 class="translation" data-text="skillsTitle" id="skillsTitlePT">Habilidades</h3>
             <span id="skillsUnderline"></span>
             <div id="skillsType">
                 <h2 class="skillsSections">Front-end</h2>
@@ -111,135 +157,43 @@
                             <li class="skill frontend">HTML
                                 <img class="imgSkill" src="/img/skills/frontend-icons/html5-icon.svg" alt="">
                                 <ul class="coursesContainer">
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <!-- <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li> -->
+                                    <!-- <li class="courses">Teste;</li> -->
                                 </ul>
                             </li>
                             <li class="skill frontend">CSS
                                 <img class="imgSkill" src="/img/skills/frontend-icons/css3-icon.svg" alt="">
                                 <ul class="coursesContainer">
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <!-- <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li> -->
+                                    <!-- <li class="courses">Teste;</li> -->
                                 </ul>
                             </li>
                             <li class="skill frontend">Javascript
                                 <img class="imgSkill" src="/img/skills/backend-icons/javascript-icon.svg" alt="">
                                 <ul class="coursesContainer">
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <!-- <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li> -->
+                                    <!-- <li class="courses">Teste;</li> -->
                                 </ul>
                             </li>
                             <li class="skill frontend">jQuery
                                 <img class="imgSkill" src="/img/skills/backend-icons/jquery-icon.svg" alt="">
                                 <ul class="coursesContainer">
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <!-- <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li> -->
+                                    <!-- <li class="courses">Teste;</li> -->
                                 </ul>
                             </li>
                             <!-- Back-end Skills -->
                             <li class="skill backend">Python
                                 <img class="imgSkill" src="/img/skills/backend-icons/python-icon.svg" alt="">
                                 <ul class="coursesContainer">
-                                    <li class="courses immersionPythonData">Imersão Python: Do Excel à Análise de Dados;</li>
-                                    <li class="courses test">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <!-- <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li> -->
-                                </ul>
-                            </li>
-                            <li class="skill backend">NodeJS
-                                <img class="imgSkill" src="/img/skills/backend-icons/nodejs-icon.svg" alt="">
-                                <ul class="coursesContainer">
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <!-- <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li> -->
+                                    <li class="courses immersionPythonData translation" data-text="courseImmersionPython">Imersão Python: Do Excel à Análise de Dados;</li>
                                 </ul>
                             </li>
                             <!-- <li class="skill backend">NodeJS
                                 <img class="imgSkill" src="/img/skills/backend-icons/nodejs-icon.svg" alt="">
                                 <ul class="coursesContainer">
                                     <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
+                                </ul>
+                            </li> -->
+                            <!-- <li class="skill backend">NodeJS
+                                <img class="imgSkill" src="/img/skills/backend-icons/nodejs-icon.svg" alt="">
+                                <ul class="coursesContainer">
                                     <li class="courses">Teste;</li>
                                 </ul>
                             </li> -->
@@ -247,199 +201,203 @@
                                 <img class="imgSkill" src="/img/skills/backend-icons/database-icon.svg" alt="">
                                 <ul class="coursesContainer">
                                     <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
                                 </ul>
                             </li> -->
                             <li class="skill backend">Java
                                 <img class="imgSkill" src="/img/skills/backend-icons/java-icon.svg" alt="">
                                 <ul class="coursesContainer">
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <!-- <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li> -->
+                                    <!-- <li class="courses">Teste;</li> -->
                                 </ul>
                             </li>
-                            <li class="skill backend">Inteligência Artificial
+                            <li class="skill backend translation" data-text="skillAI">Inteligência Artificial
                                 <img class="imgSkill" src="/img/skills/backend-icons/artificial-intelligence-icon.svg" alt="">
                                 <ul class="coursesContainer">
-                                    <li class="courses mathDeepLearningAI">Visão Matemática da Deep Learning;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <!-- <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li> -->
+                                    <li class="courses mathDeepLearningAI translation" data-text="courseMathviewDLAI">Visão Matemática da Deep Learning;</li>
                                 </ul>
                             </li>
                             <li class="skill backend">Arduino
                                 <img class="imgSkill" src="/img/skills/backend-icons/arduino-icon.svg" alt="">
                                 <ul class="coursesContainer">
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <!-- <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li> -->
+                                    <!-- <li class="courses">Teste;</li> -->
                                 </ul>
                             </li>
                             <!-- Tools Skills -->
                             <li class="skill tools">Git
                                 <img class="imgSkill" src="/img/skills/tools-icons/git-icon.svg" alt="">
                                 <ul class="coursesContainer">
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <!-- <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li> -->
+                                    <!-- <li class="courses">Teste;</li> -->
                                 </ul>
                             </li>
                             <li class="skill tools">Agile
                                 <!-- <img class="imgSkill" src="/img/skills/backend-icons/python-icon.svg" alt=""> -->
                                 <ul class="coursesContainer">
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <!-- <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li>
-                                    <li class="courses">Teste;</li> -->
+                                    <!-- <li class="courses">Teste;</li> -->
                                 </ul>
                             </li>
                         </ul>
                     </div>
                     <div class="skillsListContainer">
-                        <ul><a>Outras Habilidades</a></ul>
+                        <ul><a class="translation" data-text="labelOtherSkills">Outras Habilidades</a></ul>
                     </div>
                     <div class="certificateContainer">
                         <!-- Python Certificates -->
-                        <embed class="certificate immersionPythonData" src="certificates/certificado alura Imersao Python - Do Excel a Analise de Dados.pdf" type="application/pdf">
+                        <embed class="certificate immersionPythonData" src="coursesCertificates/certificado alura Imersao Python - Do Excel a Analise de Dados.pdf" type="application/pdf">
                         <!-- AI Certificates -->
-                        <embed class="certificate mathDeepLearningAI" src="certificates/Certificado Visão Matemática da Deep Learning.pdf" type="application/pdf">
+                        <embed class="certificate mathDeepLearningAI" src="coursesCertificates/Certificado Visão Matemática da Deep Learning.pdf" type="application/pdf">
                     </div>
                     <!-- <div class="certificateContainer">
                         <embed class="certificate immersionPythonData" src="certificates/certificado alura Imersao Python - Do Excel a Analise de Dados.pdf" type="application/pdf">
                     </div> -->
-                    <a id="projectsContainerLabel">Projetos</a>
+                    <div id="projectsContainerLabel">
+                        <a class="translation" data-text="labelProjects">Projetos</a>
+                    </div>
                     <span id="projectsUnderline"></span>
                     <img class="scrollProjects" id="scrollProjectsLeft" src="img/skills/play_arrow.svg" alt="">
                     <img class="scrollProjects" id="scrollProjectsRight" src="img/skills/play_arrow.svg" alt="">
                     <div class="projectsContainer">
+                        <div class="noProjects">
+                            <a class="translation" data-text="noProjectAvailable">Sem Projetos disponíveis</a>
+                        </div>
                         <ul class="projectList python">
-                            <div class="projectCard">
+                            <div class="projectCard immersionPythonData">
                                 <div style="display: flex; justify-content: center; align-self: center; width: 85%; border-bottom: solid 5px #d61dfc;">
-                                    <a class="projectTitle immersionPythonData">Do Excel à Análise de Dados</a>
+                                    <a class="projectTitle translation" data-text="projectCardTitlePythonImmersion">Do Excel à Análise de Dados</a>
                                 </div>
                                 <div style="display: flex; flex-direction: column; width: 95%; height: 85%; margin-top: 1.5%; justify-content: center; align-self: center;">
                                     <div>
                                         <img src="img/skills/projects/immersion-python/graphic-resume.png" alt="graphic made by the project">
                                     </div>
-                                    <a class="projectResume">Criação e manipulação de um Dataframe através de uma planilha (.docx) com dados reais financeiros da Bolsa de Valores (2023). Análise de Dados feita em Python utilizando frameworks para geração gráfica e análitica, utilizando a API yFinance com dados de 2024.</a>
+                                    <a class="projectResume translation" data-text="projectResumePythonImmersion">Criação e manipulação de um Dataframe através de uma planilha (.docx) com dados reais financeiros da Bolsa de Valores (2023). Análise de Dados feita em Python utilizando frameworks para geração gráfica e análitica, utilizando a API yFinance e prophet.</a>
                                 </div>
                             </div>
                         </ul>
-                        <ul class="projectList nodejs">
-                            <div class="projectCard">
-                                <div style="width: 80%; transform: translateX(12%); border-bottom: solid 5px #d61dfc;">
-                                    <a class="projectTitle">Teste</a>
+                        <!-- <ul class="projectList javascript jquery html css git">
+                            <div class="projectCard portfolio">
+                                <div style="display: flex; justify-content: center; align-self: center; width: 85%; border-bottom: solid 5px #d61dfc;">
+                                    <a class="projectTitle translation" data-text="projectCardTitlePortfolio">Portfólio</a>
+                                </div>
+                                <div style="display: flex; flex-direction: column; width: 95%; height: 85%; margin-top: 1.5%; justify-content: center; align-self: center;">
+                                    <div>
+                                        <img src="img/skills/projects/portfolio/home-init.png" alt="">
+                                    </div>
+                                    <br>
+                                    <a class="projectResume translation" data-text="projectResumePortfolio">Em meu portfólio você encontra uma coleção dos meus projetos, habilidades e um pouco sobre mim. Este portfólio foi totalmente criado por mim do zero, para mostrar meu trabalho e progresso como desenvolvedor.</a>
+                                </div>
                             </div>
-                        </ul>
-                        <ul class="projectList nodejs">
-                            <div class="projectCard ">
-                                <div style="width: 80%; transform: translateX(12%); border-bottom: solid 5px #d61dfc;">
-                                    <a class="projectTitle">Teste</a>
-                            </div>
-                        </ul>
-                        <ul class="projectList">
-                            <div class="projectCard ">
-                                <div style="width: 80%; transform: translateX(12%); border-bottom: solid 5px #d61dfc;">
-                                    <a class="projectTitle">Teste</a>
-                            </div>
-                        </ul>
-                        <ul class="projectList">
-                            <div class="projectCard">
-                                <div style="width: 80%; transform: translateX(12%); border-bottom: solid 5px #d61dfc;">
-                                    <a class="projectTitle">Teste</a>
-                            </div>
-                        </ul>
-                        <ul class="projectList java">
-                            <div class="projectCard">
-                                <div style="width: 80%; transform: translateX(12%); border-bottom: solid 5px #d61dfc;">
-                                    <a class="projectTitle">Teste</a>
-                            </div>
-                        </ul>
-                        <ul class="projectList">
-                            <div class="projectCard ">
-                                <div style="width: 80%; transform: translateX(12%); border-bottom: solid 5px #d61dfc;">
-                                    <a class="projectTitle">Teste</a>
-                            </div>
-                        </ul>
-                        </div>
+                        </ul> -->
                     </div>
+                </div>
+                    <div class="projectBackgroundBlur"></div>
                     <div class="projectDetailedContainer">
                         <!-- Projects -->
+                        <ul class="projectDetailed immersionPythonData">
+                            <div class="projectDetailedContainerTitle" style="border-bottom: solid 5px #d61dfc" solid 5px #d61dfc;>
+                                <a class="projectDetailedTitle translation" data-text="projectDetailedTitlePythonImmersion">
+                                    Do Excel à Análise de Dados
+                                </a>
+                                <a href="https://docs.google.com/spreadsheets/" target="_blank">
+                                    <img src="img/skills/projects/immersion-python/sheet-icon.svg" alt="" title="Google Sheets">
+                                </a>
+                                <a href="https://chatgpt.com/" target="_blank">
+                                    <img src="img/skills/projects/immersion-python/openai-icon.svg" alt="" title="ChatGPT">
+                                </a>
+                                <a href="https://www.python.org" target="_blank">
+                                    <img src="img/skills/backend-icons/python-icon.svg" alt="" title="Python">
+                                </a>
+                            </div>
+                            <div class="changeImageProjectContainer">
+                                <img class="changeImageProject changeImageProjectDown" src="img/skills/play_arrow.svg" alt="">
+                                <img class="changeImageProject changeImageProjectUp" src="img/skills/play_arrow.svg" alt="">
+                            </div>
+                            <div class="projectImagesContainer">
+                                <img class="mainImageProject" src="img/skills/projects/immersion-python/graphic-resume.png" alt="graphic made by the project">
+                                <img src="img/skills/projects/immersion-python/grafico-pizza.png" alt="graphic made by the project">
+                                <img src="img/skills/projects/immersion-python/grafico-de-vela.png" alt="graphic made by the project">
+                                <img src="img/skills/projects/immersion-python/actions-table.png" alt="graphic made by the project">
+                            </div>
+                            <div class="projectDescription">
+                                <p class="translation" data-text="projectDescriptionPythonImmersionOne">
+                                    O projeto se inicia com uma planilha com uma tabela de ações da Bolsa de Valores brasileira (2023-2024), possuindo suas variações de valores no tempo, volume, valor máximo e mínimo. Complementamos com mais informações (idade da empresa e segmento) com auxílio do ChatGPT (4.0). Realizamos uma série de análises das informações, que você pode conferir completo no repositório do projeto, segmentando as variações e comparando-os, suas variações de acordo com idade das empresas, etc.
+                                </p>
+                                <br>
+                                <p class="translation" data-text="projectDescriptionPythonImmersionTwo">
+                                    Utilizando Python, importando a planilha e bibliotecas Python (operator, turtle, pyparsing, pandas, plotly.express), transformamos adequadamente o arquivo (.docx) para a manipulação, mas apenas aprendizado, sem mais sua utilização. Adicionamos mais as bibliotecas matplotlib, mplfinance, yfinance, e utilizaremos os data frames da yfinance, estruturamos os dados e criamos os gráficos para análise.
+                                </p>                                    
+                                <br>
+                                <p class="translation" data-text="projectDescriptionPythonImmersionThree">
+                                    O primeiro gráfico, este linear, ilustra o desempenho anual de uma empresa através de seu fechamento diário (2023). O segundo trata-se de um gráfico de velas (referente a mesma empresa), com valor máximo e mínimo diário (2023), uma média móvel de sete dias e outra de quatorze dias. No terceiro gráfico, melhoramos o segundo, adicionando na sua parte inferior um gráfico de barras representando o volume transacionado, e tornando-o interativo.
+                                </p>
+                                <br>
+                                <p class="translation" data-text="projectDescriptionPythonImmersionFour">
+                                    Por último, adicionamos mais uma biblioteca, o prophet, que utilizaremos para realizar algumas previsões de dados futuros de acordo com os dados atuais (2020-2023) e fazendo uma comparação com nossos dados de treinamento.
+                                </p>                                
+                            </div>
+                            <div>
+                                <a href="https://github.com/pedromondek/Immersion-Python" target="_blank">
+                                    <img class="socials" src="img/about/github-icon.svg" alt="">
+                                </a>
+                            </div>
+                        </ul>
+                        <!-- <ul class="projectDetailed portfolio">
+                            <div class="projectDetailedContainerTitle" style="border-bottom: solid 5px #d61dfc" solid 5px #d61dfc;>
+                                <a class="projectDetailedTitle">
+                                    Portfolio
+                                </a>
+                                <a href="">
+                                    <img src="img/skills/frontend-icons/html5-icon.svg" alt="" title="HTML5">
+                                </a>
+                                <a href="">
+                                    <img src="img/skills/frontend-icons/css3-icon.svg" alt="" title="CSS3">
+                                </a>
+                                <a href="">
+                                    <img src="img/skills/backend-icons/javascript-icon.svg" alt="" title="Javascript">
+                                </a>
+                                <a href="">
+                                    <img src="img/skills/backend-icons/jquery-icon.svg" alt="" title="jQuery">
+                                </a>
+                                <a href="">
+                                    <img src="img/skills/tools-icons/git-icon.svg" alt="" title="Git">
+                                </a>
+                            </div>
+                            <div class="changeImageProjectContainer">
+                                <img class="changeImageProject changeImageProjectDown" src="img/skills/play_arrow.svg" alt="">
+                                <img class="changeImageProject changeImageProjectUp" src="img/skills/play_arrow.svg" alt="">
+                            </div>
+                            <div class="projectImagesContainer">
+                                <img class="mainImageProject" src="img/skills/projects/portfolio/home-init.png" alt="graphic made by the project">
+                                <img src="img/skills/projects/immersion-python/grafico-pizza.png" alt="graphic made by the project">
+                                <img src="img/skills/projects/immersion-python/grafico-de-vela.png" alt="graphic made by the project">
+                                <img src="img/skills/projects/immersion-python/actions-table.png" alt="graphic made by the project">
+                            </div>
+                            <div style="display: flex;align-items: center;" class="projectDescription">
+                                <p>
+                                    O projeto se inicia com .
+                                </p>
+                                <br>
+                                <p>
+                                </p>                                    
+                                <br>
+                                <p>
+                                </p>
+                                <br>
+                                <p>
+                                </p>                                
+                            </div>
+                            <div>
+                                <a href="https://github.com/pedromondek/Portfolio" target="_blank">
+                                    <img class="socials" src="img/about/github-icon.svg" alt="">
+                                </a>
+                            </div>
+                        </ul> -->
                     </div>
-                    <!-- <div> -->
-                    <!-- </div> -->
             </div>
         </div>
     </main>
     <footer style="margin-top: 1%;">
-        <a>© Pedro Henrique Guise Mondek - Todos os direitos reservados</a>
+        <a class="translation" data-text="copyright">© Pedro Henrique Guise Mondek - Todos os direitos reservados</a>
     </footer>
    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
    <script src="./javascript/home.js"></script>
+   <script src="/javascript/translate.js"></script>
 </body>
 </html>
