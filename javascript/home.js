@@ -58,23 +58,28 @@ $(menu).hover(function() {
 
     $(textoMenu).css('opacity', 1);
 
-    $(imgMenu).css('filter', 'brightness(0) invert(1) drop-shadow(0 0 8px #ffffff)');
+    $(imgMenu).not('#iconPTBR, #iconENUS').css('filter', 'brightness(0) invert(1) drop-shadow(0 0 8px #ffffff)');
+    $('.languageContainer').show();
     
     $(textoMenu).removeClass('typingMenuClose');
     $(textoMenu).addClass('typingMenuOpen');
+    
+    
 }, function () {
     $(textoMenu).removeClass('typingMenuOpen');
     $(textoMenu).addClass('typingMenuClose');
-
+    
     $(textoMenu).css('opacity', 0);
-
+    
     $(this).css('transition', 'width 2s');
     $(menuLuz).css('transition', 'width 2s');
-
+    // $('.languages, #iconPTBR, #iconENUS').css({'opacity': '0'},650);
+    $('.languageContainer').hide();
+    
     $(this).width('65px');
     $(menuLuz).width('5.5%');
-
-    $(imgMenu).css('filter', 'brightness(0) invert(0.65)');
+    
+    $(imgMenu).not('#iconPTBR, #iconENUS').css('filter', 'brightness(0) invert(0.65)');
     }
 );
 
