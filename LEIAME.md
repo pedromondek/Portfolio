@@ -99,40 +99,40 @@ Este roadmap fornece uma visão geral (não detalhada) das etapas planejadas e m
 Abaixo você encontrará as principais fases do projeto juntamente com as tarefas:
 
 - [ ] Barra Lateral
-  - [ ] Estrutura
+  - [x] Estrutura
     - [x] Adicionar "Home Page" à barra lateral
     - [x] Adicionar "Sobre Mim" à barra lateral
     - [x] Adicionar "Habilidades" à barra lateral
-    - [ ] Adicionar Switch para alterar idioma
-  - [x] Animações
+    - [x] Adicionar Switch para alterar idioma
+  - [ ] Animações
 - [x] Home Page
   - [x] Estrutura
     - [x] Estrutura Principal
     - [x] Botão de rolagem para baixo (scroll down)
   - [x] Animações
 - [ ] Sobre Mim
-  - [ ] Estrutura
+  - [x] Estrutura
     - [x] Texto de Descrição
     - [x] Foto (avatar) em conjunto à meus hobbies e habilidades
-    - [ ] Botões para Contato/Social
+    - [x] Botões para Contato/Social
   - [ ] Animações
 - [ ] Habilidades
-  - [ ] **Estrutura <u>*(em construção* 🚧 *)*</u>**
+  - [x] Estrutura
     - [x] Estrutura Principal das habilidades
     - [x] Abrir/Alterar habilidades
     - [x] Abrir Certificado/Curso
     - [x] Estrutura Principal dos projetos
-    - [ ] Resumo do Projeto
+    - [x] Resumo do Projeto
     - [x] Rolagem para Projetos
-    - [ ] Estrutura para Projeto e adicionar link para repositório <u>*(em construção* 🚧 *)*</u>
-    - [ ] Abrir Projeto <u>*(em construção* 🚧 *)*</u>
+    - [x] Estrutura para Projeto e adicionar link para repositório
+    - [x] Abrir Projeto
   - [ ] Adicionar Certificados/Cursos
   - [ ] Adicionar Projetos
   - [ ] Animações
-- [ ] Tradução para Inglês
-  - [ ] Barra Lateral
-  - [ ] Home Page
-  - [ ] Sobre Mim
+- [ ] **Tradução para Inglês <u>*(em construção* 🚧 *)*</u>**
+  - [x] Barra Lateral
+  - [x] Home Page
+  - [x] Sobre Mim
   - [ ] Habilidades
 - [ ] Revisar código e remover código inútil
 - [ ] Site Responsivo

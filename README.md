@@ -99,40 +99,40 @@ This roadmap provides a general (not detailed) overview of the planned steps and
 Below you will find the main phases of the project along with the tasks:
 
 - [ ] Sidebar
-  - [ ] Structure
+  - [x] Structure
     - [x] Add Home Page to sidebar
     - [x] Add About Me Page to sidebar
     - [x] Add Skills Page to sidebar
-    - [ ] Switch to change language
-  - [x] Animations
+    - [x] Switch to change language
+  - [ ] Animations
 - [x] Home Page
   - [x] Structure
     - [x] Main Structure
     - [x] Scroll down button
   - [x] Animations
 - [ ] About Me Page
-  - [ ] Structure
+  - [x] Structure
     - [x] Description Text
     - [x] Photo Avatar with my hobbies and abilities
-    - [ ] Contact/Social buttons
+    - [x] Contact/Social buttons
   - [ ] Animations
 - [ ] Skills Page
-  - [ ] **Structure <u>*(now under construction* 🚧 *)*</u>**
+  - [x] Structure
     - [x] Main Structure of abilities
     - [x] Open/Change abilities
     - [x] Open Certificate/Course
     - [x] Main Structure of projects
-    - [ ] Project Summary
+    - [x] Project Summary
     - [x] Projects scroll
-    - [ ] Project structure and link to project repository <u>*(now under construction* 🚧 *)*</u>
-    - [ ] Open Project <u>*(now under construction* 🚧 *)*</u>
+    - [x] Project structure and link to project repository
+    - [x] Open Project
   - [ ] Add Certificates/Courses
   - [ ] Add Projects
   - [ ] Animations
-- [ ] English Translation
-  - [ ] Sidebar
-  - [ ] Home Page
-  - [ ] About Me Page
+- [ ] **English Translation  <u>*(under construction* 🚧 *)*</u>**
+  - [x] Sidebar
+  - [x] Home Page
+  - [x] About Me Page
   - [ ] Skills Page
 - [ ] Review code and remove junk code
 - [ ] Responsive website
