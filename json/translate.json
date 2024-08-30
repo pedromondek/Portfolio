@@ -1,0 +1,84 @@
+{
+    "ptBR": {
+        "homeMenu": "Início",
+        "aboutMeMenu": "Sobre Mim",
+        "skillsSideBar": "Habilidades",
+        "languageOptions": "Idioma",
+        "optionPortuguese": "Português",
+        "optionEnglish": "Inglês",
+
+        "homeDeveloper": "Desenvolvedor",
+
+        "aboutMeTitle": "Sobre Mim",
+        "aboutTextOne": "Olá! Primeiramente obrigado por visitar meu Portfolio, sou Desenvolvedor Full Stack, atualmente estou cursando Ciência da Computação (Bacharelado) na Universidade Positivo de Londrina e morando em Londrina-PR. Minha principal paixão e conhecimento atualmente é na área de desenvolvimento Web, como JavaScript e jQuery.",
+        "aboutTextTwo": "Também tenho conhecimentos em Python, Front-end, SQL, Java, Git, Microsoft Office e conhecimentos básicos em Hardware e Linux. E atualmente tenho trabalhado em mods de jogos, websites.",
+        "aboutTextThree": "Em meu tempo livre jogo e mestro RPG de mesa desde 2019, programo algumas coisas para o FoundryVTT, amo jogar jogos, inclusive minha inicialização para aprender sobre computadores e programação foi a partir de jogos.",
+        "aboutTextFour": "E além disso, sou atleta pelo time de Londrina desde 2022 de Kendo e Iaido, uma arte marcial e esporte japonês e faço parte da diretoria (Tesoureiro) do dojo Aka Ashi.",
+        
+        "skillsTitle": "Habilidades",
+        "skillAI": "Inteligência Artificial",
+
+        "labelOtherSkills": "Outras Habilidades",
+
+        "courseImmersionPython": "Imersão Python: Do Excel à Análise de Dados;",
+        "courseMathviewDLAI": "Visão Matemática da Deep Learning;",
+
+        "labelProjects": "Projetos",
+        "noProjectAvailable": "Sem Projetos disponíveis",
+
+        "projectCardTitlePythonImmersion": "Do Excel à Análise de Dados",
+        "projectResumePythonImmersion": "Criação e manipulação de um Dataframe através de uma planilha (.docx) com dados reais financeiros da Bolsa de Valores (2023). Análise de Dados feita em Python utilizando frameworks para geração gráfica e análitica, utilizando a API yFinance e prophet.",
+
+        "projectCardTitlePortfolio": "Portfólio",
+        "projectResumePortfolio": "Em meu portfólio você encontra uma coleção dos meus projetos, habilidades e um pouco sobre mim. Este portfólio foi totalmente criado por mim do zero, para mostrar meu trabalho e progresso como desenvolvedor.",
+
+        "projectDetailedTitlePythonImmersion": "Do Excel à Análise de Dados",
+        "projectDescriptionPythonImmersionOne": "O projeto se inicia com uma planilha com uma tabela de ações da Bolsa de Valores brasileira (2023-2024), possuindo suas variações de valores no tempo, volume, valor máximo e mínimo. Complementamos com mais informações (idade da empresa e segmento) com auxílio do ChatGPT (4.0). Realizamos uma série de análises das informações, que você pode conferir completo no repositório do projeto, segmentando as variações e comparando-os, suas variações de acordo com idade das empresas, etc.",
+        "projectDescriptionPythonImmersionTwo": "Utilizando Python, importando a planilha e bibliotecas Python (operator, turtle, pyparsing, pandas, plotly.express), transformamos adequadamente o arquivo (.docx) para a manipulação, mas apenas aprendizado, sem mais sua utilização. Adicionamos mais as bibliotecas matplotlib, mplfinance, yfinance, e utilizaremos os data frames da yfinance, estruturamos os dados e criamos os gráficos para análise.",
+        "projectDescriptionPythonImmersionThree": "O primeiro gráfico, este linear, ilustra o desempenho anual de uma empresa através de seu fechamento diário (2023). O segundo trata-se de um gráfico de velas (referente a mesma empresa), com valor máximo e mínimo diário (2023), uma média móvel de sete dias e outra de quatorze dias. No terceiro gráfico, melhoramos o segundo, adicionando na sua parte inferior um gráfico de barras representando o volume transacionado, e tornando-o interativo.",
+        "projectDescriptionPythonImmersionFour": "Por último, adicionamos mais uma biblioteca, o prophet, que utilizaremos para realizar algumas previsões de dados futuros de acordo com os dados atuais (2020-2023) e fazendo uma comparação com nossos dados de treinamento.",
+
+        "copyright": "© Pedro Henrique Guise Mondek - Todos os direitos reservados"
+    },
+    "en": {
+        "homeMenu": "Home",
+        "aboutMeMenu": "About Me",
+        "skillsSideBar": "Skills",
+        "languageOptions": "Language",
+        "optionPortuguese": "Portuguese",
+        "optionEnglish": "English",
+        
+        "homeDeveloper": "Developer",
+        
+        "aboutMeTitle": "About Me",
+        "aboutTextOne": "Hi! Firstly, thank you for visiting my Portfolio, I am a Full Stack Developer, currently studying Computer Science (Bachelor's degree) at Universidade Positivo de Londrina and living in Londrina-PR. My main passion and knowledge currently is in the area of ​​Web development, such as JavaScript and jQuery.",
+        "aboutTextTwo": "Also, I have knowledge in Python, Front-end, SQL, Java, Git, Microsoft Office and basic knowledge in Hardware and Linux. And I've currently been working on game mods, websites.",
+        "aboutTextThree": "In my free time I've been playing and mastering tabletop RPGs since 2019, program some things for FoundryVTT, and love playing games, including my initial start to learn about computers and programming was from games.",
+        "aboutTextFour": "Furthermore, I have been an athlete on the Londrina team since 2022 in Kendo and Iaido, a martial art and Japanese sport, and I am part of the board (Treasurer) of the Aka Ashi dojo.",
+
+        "skillsTitle": "Skills",
+        "skillAI": "Artificial Intelligence",
+
+        "labelOtherSkills": "Other Skills",
+        
+        "courseImmersionPython": "Python Immersion: From Excel to Data Analysis;",
+        "courseMathviewDLAI": "Mathematical Vision of Deep Learning;",
+
+        "labelProjects": "Projects",
+        "noProjectAvailable": "No Projects available",
+
+        "projectCardTitlePythonImmersion": "From Excel to Data Analysis",
+        "projectResumePythonImmersion": "Creation and manipulation of a Dataframe through a spreadsheet (.docx) with real financial data from the Stock Exchange (2023). Data Analysis carried out in Python using frameworks for graphical and analytical generation, using the yFinance API and prophet.",
+
+        "projectCardTitlePortfolio": "Portfolio",
+        "projectResumePortfolio": "In my portfolio you will find a collection of my projects, skills and a little bit about me. This portfolio was created by me, to showcase my work and progress as a developer.",
+
+        "projectDetailedTitlePythonImmersion": "From Excel to Data Analysis",
+        "projectDescriptionPythonImmersionOne": "The project starts with a spreadsheet with a table of shares on the Brazilian Stock Exchange (2023-2024), with their variations in value over time, volume, maximum and minimum value. We supplemented it with more information (company age and segment) using ChatGPT (4.0). We carried out a series of analyses of the information, which you can check out in full in the project repository, segmenting the variations and comparing them, their variations according to the age of the companies, etc.",
+        "projectDescriptionPythonImmersionTwo": "Using Python, importing the spreadsheet and Python libraries (operator, turtle, pyparsing, pandas, plotly.express), we transform the file (.docx) appropriately for manipulation, but only for learning, without further use. We add the matplotlib, mplfinance and yfinance libraries and we will use the yfinance data frames, structuring this data and creating the graphs for analysis.",
+        "projectDescriptionPythonImmersionThree": "The first graph, this one linear, illustrates the annual performance of a company through its daily closing (2023). The second is a candlestick chart (referring to the same company), with daily maximum and minimum values ​​(2023), a seven-day moving average and another of fourteen days. In the third graph, we improved the second one, adding a bar chart at the bottom representing the volume traded, and making it interactive.",
+        "projectDescriptionPythonImmersionFour": "Finally, we added one more library: prophet, which we will use to make some predictions of future data according to the current data (2020-2023) and comparing it with our training data.",
+
+        "copyright": "© Pedro Henrique Guise Mondek - All rights reserved"
+    }
+}
