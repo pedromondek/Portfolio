@@ -10,7 +10,7 @@
 ----------
 
 > [!NOTE]
-> If you prefer to read this document in "EN-US :us:", feel free to read it in **[here (README.md)](README.md)**
+> If you prefer to read this document in "EN-US <img style="width:13px" src="https://em-content.zobj.net/source/google/387/flag-united-states_1f1fa-1f1f8.png"/>", feel free to read it in **[here (README.md)](README.md)**
 
 > [!WARNING]
 > Por favor, lembre-se de que o site está **em desenvolvimento**, então pode haver *erros, bugs, problemas e imperfeições*, não deixe de conferir o roadmap para mais informações.

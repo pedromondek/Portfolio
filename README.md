@@ -10,7 +10,7 @@
 ----------
 
 > [!NOTE]
-> Caso tenha preferência de ler este documento em "PT-BR :brazil:", sinta-se livre para ler **[aqui (LEIAME.md)](LEIAME.md)**
+> Caso tenha preferência de ler este documento em "PT-BR <img style="width:13px" src="https://em-content.zobj.net/source/google/387/flag-brazil_1f1e7-1f1f7.png"/>", sinta-se livre para ler **[aqui (LEIAME.md)](LEIAME.md)**
 
 > [!WARNING]
 > Please remember that the site is **under development**, so there may be *errors, bugs, issues and imperfections*, be sure to check out the roadmap for more information
