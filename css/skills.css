@@ -411,7 +411,7 @@
 }
 
 #projectsContainerLabel {
-    width: fit-content;
+    width: 100%;
     height: fit-content;
 
     position: absolute;
@@ -421,10 +421,10 @@
 
     filter: drop-shadow(0px -2px 6px #cececee5);
     
-    letter-spacing: 2px; 
+    letter-spacing: 3px; 
     white-space: nowrap;
     
-    left: 46%;
+    /* left: 46%; */
     /* left: 6%; */
     top: 53%;
     /* transform: translateY(45%); */
@@ -457,6 +457,32 @@
     padding-right: 34.35%;
 }
 
+.noProjects {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+
+    font-family: 'Stick', sans-serif;
+    font-size: 45px;
+
+    filter: drop-shadow(0px -2px 6px #cececee5) brightness(25%);
+    color: #ffffff;
+    
+    letter-spacing: 15px; 
+    white-space: nowrap;
+
+    width: 100%;
+    height: 100%;
+}
+
+.noProjects a {
+    width: 100%;
+    height: fit-content;
+
+    text-align: center;
+}
+
 .projectCard {
     cursor: pointer;
 
@@ -465,6 +491,7 @@
     
     position: absolute;
     display: flex;
+    /* display: none; */
     flex-direction: column;
     
     top: 15%;
@@ -525,16 +552,16 @@
     position: absolute;
 
     
-    width: 64.5%;
+    width: 74.5%;
     /* width: 84.5%; */
-    height: 100%;
+    height: 90%;
     
     /* top: 10%; */
-    transform: translate(28.5%,-113%);
+    transform: translate(18.5%,13.25%);
     
-    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     
     display: none;
 
@@ -547,20 +574,148 @@
     box-shadow: 0px 0px 500px 120px #7e119465;
 }
 
-.projectDetailedContainer::before {
-    content: '';
+.projectBackgroundBlur {
+    display: none;
 
     position: absolute;
 
-    width: 400vw;
-    height: 400vh;
+    z-index: 1;
 
-    top: -100%;
-    left: -100%;
+    transform: translate(-10%);
 
-    overflow: visible;
+    width: 200vw;
+    height: 200vh;
 
-    z-index: -1;
+    background-color: #000000;
+    opacity: 0.9;
+    filter: blur(15px);
+}
 
-    backdrop-filter: blur(5px);
+.projectDetailed {
+    display: none;
+
+    margin-top: -1%;
+
+    width: 90%;
+    height: 99%;
+}
+
+.projectDetailedTitle {
+    font-family: 'Stick', sans-serif;
+    font-size: 35px;
+    letter-spacing: 2.5px; 
+    
+    width: 100%;
+}
+
+.projectDetailed div {
+    margin-bottom: 1%;
+}
+
+.projectDetailedContainerTitle img {
+    cursor: pointer;
+    /* position: relative; */
+
+    max-width: 2.2%;
+    height: auto;
+}
+
+.projectDetailedContainerTitle img:hover {
+    max-width: 2.5%;
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.664));
+}
+
+.projectImagesContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+
+    width: 100%;
+    height: 35%;
+
+    margin-left: 17.4%;
+
+    object-fit: contain;
+    overflow: hidden; 
+    /* verificar se está correto */
+}
+
+.changeImageProjectContainer {
+    cursor: pointer;
+    position: absolute;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    width: 10%;
+    height: 35%;
+
+    left: 20.3%;
+
+}
+
+.changeImageProjectDown {
+    transform: translateX(353%);
+    
+    rotate: 90deg;
+}
+
+.changeImageProjectUp {
+    transform: translateX(353%);
+
+    rotate: -90deg;
+}
+
+.changeImageProject {
+    scale: 1.5;
+    filter: drop-shadow(0px -2px 6px #cececea8);
+}
+
+.changeImageProject:hover {
+    scale: 1.6;
+    filter: drop-shadow(0px -2px 6px #cecececb);
+}
+
+.projectImagesContainer img {
+    cursor: pointer;
+    
+    width: 10%;
+    height: 20%;
+
+    filter: brightness(60%) blur(1px);
+}
+
+.projectImagesContainer img.mainImageProject {
+    position: absolute;
+    
+    left: 30%;
+    
+    width: 40%;
+    height: auto;
+    max-height: 35%;
+    
+    filter: brightness(100%);
+}
+
+.projectImagesContainer img:not(.mainImageProject):hover {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+.projectDescription {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 20px;
+    /* font-size: fit-content; */
+    letter-spacing: 1px; 
+    word-wrap: break-word;
+    text-overflow: clip;
+    overflow: hidden;
+    
+    width: 100%;
+    height: 51%;
+    max-height: 51%;
 }
