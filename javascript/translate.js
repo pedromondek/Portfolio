@@ -1,5 +1,5 @@
 function changeLanguage(language) {
-    const translationsData = './json/translate.json';
+    const translationsData = './javascript/translate.json';
     
     const xhr = new XMLHttpRequest();
 
