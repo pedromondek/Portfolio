@@ -222,6 +222,8 @@ function mainSectionSkill() {
 
 $('#skillsPage').ready(function() {
     mainSectionSkill();
+    $('.noProjects a').hide();
+    // $('.projectDetailedContainer').hide();
 })
 
 
