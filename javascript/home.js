@@ -295,7 +295,7 @@ function showSkill(tecnology, section) {
 
     var ls = tecnology;
     ls = $(ls).clone().children().remove().end().text().trim().toLowerCase();
-
+    
     if (skillActive === false) {
         skillActive = true;
         
@@ -305,7 +305,7 @@ function showSkill(tecnology, section) {
             var skillOffArray = $(element).contents().filter(function () {
                 return this.nodeType === 3;                
             }).text().trim();
-
+            
             $('.skillsListContainer ul').append($("<li class=otherSkills>").text(skillOffArray));
         });
         
@@ -327,20 +327,29 @@ function showSkill(tecnology, section) {
             'transform': 'translate(-2770%,40%)',
             'filter': 'brightness(100%)'
         });
-       
+        
         // DESENVOLVENDO PROJECTS RELACIONADO A SKILL
         $('.projectList').not("." + ls).hide();
-
+        
+        
         if (document.querySelectorAll('.' + ls).length < 3) {
             $('.scrollProjects').hide();
             $('.projectCard').css({
                 'top': '21%',
                 'height': '84%'
-        });
-        };
+            });
+        }
 
+        if(document.querySelectorAll('.' + ls).length >= 1 || skillActive === false) {
+            $('.noProjects a').hide();
+        } else {
+            $('.noProjects a').show();
+        };
+        
     } else {
         $('.skillsListContainer').css('opacity', '0');
+
+        $('.noProjects a').hide();
         
         $(skillOff).each(function(index, element) {
             $('.skillsListContainer ul li').remove();
@@ -362,7 +371,7 @@ function showSkill(tecnology, section) {
             $('.skillActive').find("ul").hide();
             $(skillTool).removeClass('skillActive');
         };
-
+        
         $(skillOff).show();
         $('.projectList').show();
         $('.projectCard').css({
@@ -438,30 +447,82 @@ $('#scrollProjectsRight').on("click", function() {
 
 // open & close project detailed
 var tempProject;
+let imagesProject;
+var tempClass;
 
-$('.projectList').each(function(i,e) {
+$('.projectCard').each(function(i,e) {
     $(e).on("click", function() {
-        $('.certificate').each(function(i,el) { // trocar certificate por projeto descrito
+        $('.projectDetailed').each(function(i,el) {
             var eClass = $(e).attr('class').split(' ');
             var elClass = $(el).attr('class').split(' ');
 
             if(eClass[1] === elClass[1]) {
                 tempProject = el;
-
                 $(tempProject).show();
-                $('.projectDetailedContainer').show();
+                $('.projectDetailedContainer').css('display', 'flex');
 
                 $('body').animate({
-                    scrollTop: $('#skillsPage').offset().top // definir altura desejada
+                    scrollTop: $('.skillsSections').offset().top + 10
                 });
 
+                $('.projectBackgroundBlur').show();
                 $('body').css('overflow-y', 'hidden');
             };
         });
+
+        tempClass = $(tempProject).attr('class').split(' ');
+        imagesProject = $('.'+ tempClass[1]).find('.projectImagesContainer img');
+
+        // reset image index
+        $('.projectImagesContainer').find('.mainImageProject').removeClass('mainImageProject');
+        $(imagesProject[0]).addClass('mainImageProject')
     });
 });
+
 // modificar certificate para projeto
-$('.projectDetailedContainer').not('.certificate', '.projectDetailedContainer').on("click", function() {
+$('.projectBackgroundBlur').on("click", function() {
     $('.projectDetailedContainer').hide();
+    $('.projectBackgroundBlur').hide();
+    $('.projectDetailed').hide();
     $('body').css('overflow-y', 'visible');
+});
+
+// change image inside the project
+$('.projectImagesContainer img').each(function(i,e) {
+    $(e).on("click", function() {
+        $('.projectImagesContainer img').removeClass('mainImageProject');
+        $(e).addClass('mainImageProject');
+    });
+});
+
+$('.changeImageProjectDown').on("click", function() {
+    $(imagesProject).each(function(i,e) {
+        if($(e).hasClass('mainImageProject')){
+            $(e).removeClass('mainImageProject');
+            
+            if(i+1 <= 3) {
+                $(imagesProject[i+1]).addClass('mainImageProject');
+            } else {
+                $(imagesProject[0]).addClass('mainImageProject');
+            };
+            
+            return false;
+        };
+    });
+});
+
+$('.changeImageProjectUp').on("click", function() {
+    $(imagesProject).each(function(i,e) {
+        if($(e).hasClass('mainImageProject')){
+            $(e).removeClass('mainImageProject');
+
+            if(i-1 >= 0) {
+                $(imagesProject[i-1]).addClass('mainImageProject');
+            } else {
+                $(imagesProject[3]).addClass('mainImageProject');
+            };
+
+            return false;
+        };
+    });
 });
