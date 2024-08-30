@@ -34,13 +34,26 @@
     animation: luz 1.65s linear infinite;
 }
 
-.menu img {
+.menu img:not(#iconPTBR, #iconENUS) {
     /* scale: 130%; */
     filter: brightness(0) invert(0.65);
 
     z-index: 2;
 }
 
+#iconPTBR, #iconENUS {
+    display: none;
+
+    opacity: 0;
+
+    filter: brightness(0.6);
+    transition: display .8 ease-in;
+}
+
+/* 
+#iconPTBR:hover, #iconENUS:hover, .languages:hover {
+    filter: brightness(1.1);
+} */
 
 .menu h2 {
     font-family: 'Reggae One', system-ui;
@@ -90,12 +103,14 @@
     margin-bottom: 25px;
     margin-top: 10px;
 }
+
 .menu ul li div {
     position: relative;
     display: flex;
     
     height: 29px;
 }
+
 .menu ul li div img {
     margin: 0px 17px;
     margin-left: 22px;
@@ -104,8 +119,98 @@
 .typingMenuOpen {
     animation: typingMenuA 1s steps(12);
 }
+
 .typingMenuClose {
     animation: typingMenuB .8s steps(8);
+}
+
+.menu:hover .languageTitle::after {
+    content: '';
+
+    position: absolute;
+
+    /* display: flex; */
+
+    /* align-items: center; */
+
+    width: 2px;
+    /* height: 76px; */
+
+    margin-left: 36px;
+    margin-top: 30px;
+
+    background-color: #ffffff;
+
+    animation: titleLineDown .5s linear forwards;
+}
+
+.languageContainer {
+    display: none;
+
+    margin-left: 20%;
+
+    bottom: 85%;
+}
+
+.languageContainer div {
+    margin-top: 10%;
+}
+
+.menu:hover .languageContainer div::before {
+    content: '';
+
+    position: absolute;
+    display: flex;
+
+    align-items: center;
+
+    /* width: 35px; */
+    height: 2px;
+
+    margin-top: 15px;
+    left: -8px;
+
+    background-color: #ffffff;
+
+    animation: titleLineRight .25s linear .5s forwards;
+}
+
+.languages {
+    font-family: 'Reggae One', system-ui;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    
+    filter: drop-shadow(5px 5px 8px #000000) brightness(0.6);
+    opacity: 0;
+    color: #ffffff;
+    /* border-right: 2px solid #424242; */
+
+    z-index: 2;
+
+    transform: translate(-5px,5px);
+
+    /* margin-left: px; */
+    /* height: 35px; */
+}
+
+.menu:hover .languages {
+    animation: fadeIn 1s linear .5s forwards;
+}
+
+.menu:hover #iconPTBR, .menu:hover #iconENUS {
+    animation: fadeIn 1s linear forwards;
+}
+
+.activeLanguage {
+    filter: brightness(1.5);
+}
+
+#containerPTBR:hover, #containerENUS:hover {
+    filter: brightness(2);
+    transition: all 1s ease;
 }
 
 @keyframes luz {
@@ -127,6 +232,7 @@
         /* width: 8ch; */
     }
 }
+
 @keyframes typingMenuB {
     from {
         border-right: 4px solid rgb(214, 29, 252);
@@ -134,5 +240,35 @@
     }
     to {
         width: 0ch;
+    }
+}
+
+@keyframes titleLineDown {
+    0% {
+        height: 0px;
+    }
+    50% {
+        height: 32px;
+    }
+    100% {
+        height: 76px;
+    }
+}
+
+@keyframes titleLineRight {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 35px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
     }
 }
