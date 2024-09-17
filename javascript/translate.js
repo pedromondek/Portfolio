@@ -1,14 +1,10 @@
 function changeLanguage(language) {
     const translationsData = './javascript/translate.json';
-    
-    const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', translationsData, true);
-    xhr.send();
-
-    xhr.onload = function() {
-        const dataText = xhr.responseText;
-        const elementTranslation = JSON.parse(dataText);
+    fetch(translationsData)
+      .then(response => response.json())
+      .then(translations => {
+        const elementTranslation = translations;
         const translateElement = document.querySelectorAll('.translation');
 
         translateElement.forEach((index) => {
@@ -16,7 +12,9 @@ function changeLanguage(language) {
     
             index.textContent = elementTranslation[language][word];
         });
-    }
+      })
+      .catch(error => console.error('Erro ao carregar o arquivo JSON:', error));
+
 }
 
 let activeLang;
